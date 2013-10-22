@@ -10,7 +10,10 @@
 	height: auto;
 	margin: 0px auto;
 }
-
+#header{
+	width: 960px;
+	height: 200px;
+}
 #navigation{
 	width: inherit;
 	height: 50px;
@@ -34,4 +37,49 @@
 #navigation ul li a:hover{
 	color:red;
 }
+#allkategori{
+	height: 350px;
+	margin: 0px auto;
+	border: 1px solid black;
+}
 
+
+dl{
+	width: 150px;
+	margin: 0px;
+}
+
+dd{
+	margin: 20px;
+}
+
+dt{
+	background-color: gray;
+	font-size: 16px;
+	padding: 14px;
+	margin: 8px;
+}
+
+dt a{
+	color: #FFF;
+}
+
+dd a{
+	color: #000;
+}
+
+ul{
+	list-style: none;
+	padding: 5px;
+}
+
+.clear{
+	clear: both;
+}
+
+#footer{
+	width: 960px;
+	height: 20px;
+	text-align: center;
+	background-color: gray;
+}
