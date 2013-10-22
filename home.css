@@ -37,6 +37,10 @@
 #navigation ul li a:hover{
 	color:red;
 }
+#content{
+	width: 960px;
+	height: 700px;
+}
 #allkategori{
 	height: 350px;
 	margin: 0px auto;
