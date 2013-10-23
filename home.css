@@ -32,6 +32,7 @@ body{
 	text-decoration: none;
 	color: black;
 	font-size: 20pt;
+
 }
 
 #navigation ul li a:hover{
@@ -44,7 +45,37 @@ body{
 	text-decoration: none;
 	float: left;
 }
+dl{
+	width: 150px;
+	margin: 0px;
+}
 
+dd{
+	margin: 20px;
+}
+
+dt{
+	background-color: gray;
+	font-size: 16px;
+	padding: 14px;
+	margin: 8px;
+}
+
+dt a{
+	color: #FFF;
+}
+
+dd a{
+	color: #000;
+}
+
+ul{
+	list-style: none;
+	padding: 5px;
+}
+#category ul li a:hover{
+	color:red;
+}
 #SlideShow
 {
 	float: left;
@@ -52,9 +83,30 @@ body{
 	margin: 20px;
 }
 
-ul{
-	list-style: none;
-	padding: 5px;
+#right{
+	float: left;
+	border: 1px solid black;
+	margin: 20px;
+}
+
+#search{
+	margin:8px;
+}
+
+#search button{
+	background:url('../pict/search.png');
+	width:20px;
+	height:20px;
+}
+
+#search input{
+	border: 1px solid black;
+}
+
+#cart img{
+	margin : 0px 5px 10px 45px;
+	width:45px;
+	height:45px;
 }
 
 .clear{
