@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html>
-</head>
-	<title>Home</title>
-	<script type="text/javascript" src="jquery-1.10.2.js"></script>
-	<link rel="stylesheet" href="home.css" type="text/css"/>
-	<script type="text/javascript">
-		$(document).ready(function()
-		{
-			$("dd:not(:first)").hide();
-			$("dt a").click(function()
+
+	<head>
+		<title>Home</title>
+		<script type="text/javascript" src="jquery-1.10.2.js"></script>
+		<link rel="stylesheet" href="960_12_col.css" type="text/css"/>
+		<script type="text/javascript">
+			$(document).ready(function()
 			{
-				$("dd:visible").slideUp("slow");
-				$(this).parent().next().slideDown("slow");
-				return false;
+				$("dd:not(:first)").hide();
+				$("dt a").click(function()
+				{
+					$("dd:visible").slideUp("slow");
+					$(this).parent().next().slideDown("slow");
+					return false;
+				});
 			});
-		});
 
-		$('#container').freetile(
-		{
-    		animate: true,
-    		elementDelay: 30
-		});
-	</script>
-</head>
-	
-<body>
-	<div id="wrapper">
-		<div id="header">
-			<a href="#"><img src="DESAINPROGWEB.jpg" width="400"/></a>
-		</div>
+			$('#container').freetile(
+			{
+    			animate: true,
+    			elementDelay: 30
+			});
+		</script>
+	</head>
 
-		<div id="navigation">
-			<ul>
-				<li><a href="#"><strong>HOME</strong></a></li>
-				<li><a herf="#"><strong>HOW TO BUY</strong></a></li>
-				<li><a href="#"><strong>ABOUT US</strong></a></li>
-				<li><a href="#"><strong>TESTIMONY</strong></a></li>
-				<li><a href="#"><strong>PERSONAL INFO</strong></a></li>
-			</ul>
-		</div>
+	<body>
+		<div id="wrap" class="container_12"> 
+			<div id="header" class="grid_12">
+  <!-- Kode harus berada di dalam class container_12 -->
+  				<a href="#"><img src="DESAINPROGWEB.jpg" width="400"/></a>
+  			</div>
 
-		<div id="content">
-			<div class="allcategory">
+  			<div id="navigation">
+				<ul>
+					<li><a href="#" class="grid_2"><strong>HOME</strong></a></li>
+					<li><a herf="#" class="grid_2"><strong>HOW TO BUY</strong></a></li>
+					<li><a href="#" class="grid_2"><strong>ABOUT US</strong></a></li>
+					<li><a href="#" class="grid_2"><strong>TESTIMONY</strong></a></li>
+					<li><a href="#" class="grid_2"><strong>PERSONAL</strong></a></li>
+				</ul>
+			</div>
+
+			<div id="allcategory" class="grid_2">
 				<dl>
 					<dt> <a href="#"> CARS </a> </dt>
 						<dd>
 							<ul>
-								<li><a href="#"> SPORT</a></li>
+								<li><a href="Sport.html"> SPORT</a></li>
 								<li><a href="#"> F1 </a></li>
 								<li><a href="#"> SUV</a></li>
 								<li><a href="#"> MPV</a></li>
@@ -89,40 +90,34 @@
 							</ul>
 						</dd>
 				</dl>
-			</div>	
-		
-			<div id="SlideShow">
-				<img src="GambarCarprogweb/1.jpg" width="500"/>
 			</div>
 
-			<div id="right">
+			<div id="SlideShow" class="grid_6">
+				<img src="GambarCarprogweb/1.jpg" width="400"/>
+			</div>
+
+			<div id="right" class="grid_3">
 			    <div id="search">
 			    	<button></button>
 			    	<input type="text" value="search" />
 				</div>
 
-				<hr>
 				<div id="valid">
 					<ul>
-						<li><a href="#"> <center><h3>Sign In</h3></center></a></li>
-						<li><a href="#"> <center><h4>Create New Account</h4></center> </a></li>
+						<li><a href="#"><h3>Sign In</h3></a></li>
+						<li><a href="#"><h4>Create New Account</h4></a></li>
 					</ul>
 				</div>
 
-				<hr>
 				<div id="cart">
 					<h2><center>Shopping Cart</center></h2></br>
 					<img src="../pict/cart-icon.jpg">
 					<LABEL></LABEL>
 				</div>
 			</div>
+
 		</div>
+	</body>
 
-		<div id="footer" class="clear">
-			<div id="footer-detail">
-				&copy; 2013 RC-Shop.com Design by Genesis Progweb
-			</div>
-		</div>
+</html>
 
-
-</body>
