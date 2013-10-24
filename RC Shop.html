@@ -3,46 +3,29 @@
 
 	<head>
 		<title>Home</title>
+		
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="960_12_col.css" type="text/css"/>
-		<script type="text/javascript">
-			$(document).ready(function()
-			{
-				$("dd:not(:first)").hide();
-				$("dt a").click(function()
-				{
-					$("dd:visible").slideUp("slow");
-					$(this).parent().next().slideDown("slow");
-					return false;
-				});
-			});
-
-			$('#container').freetile(
-			{
-    			animate: true,
-    			elementDelay: 30
-			});
-		</script>
+		<link rel="stylesheet" href="960_24_col.css" type="text/css"/>
 	</head>
 
 	<body>
-		<div id="wrap" class="container_12"> 
-			<div id="header" class="grid_12">
+		<div id="wrap" class="container_24"> 
+			<div id="header" class="grid_24">
   <!-- Kode harus berada di dalam class container_12 -->
-  				<a href="#"><img src="DESAINPROGWEB.jpg" width="400"/></a>
+  				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
   			</div>
 
-  			<div id="navigation">
+  			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="#" class="grid_2"><strong>HOME</strong></a></li>
-					<li><a herf="#" class="grid_2"><strong>HOW TO BUY</strong></a></li>
-					<li><a href="#" class="grid_2"><strong>ABOUT US</strong></a></li>
-					<li><a href="#" class="grid_2"><strong>TESTIMONY</strong></a></li>
-					<li><a href="#" class="grid_2"><strong>PERSONAL</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>HOME</strong></a></li>
+					<li><a herf="howtobuy.html" class="grid_4"><strong>HOW TO BUY</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
 				</ul>
 			</div>
 
-			<div id="allcategory" class="grid_2">
+			<div id="allcategory" class="grid_4">
 				<dl>
 					<dt> <a href="#"> CARS </a> </dt>
 						<dd>
@@ -92,25 +75,25 @@
 				</dl>
 			</div>
 
-			<div id="SlideShow" class="grid_6">
+			<div id="SlideShow" class="grid_12">
 				<img src="GambarCarprogweb/1.jpg" width="400"/>
 			</div>
 
-			<div id="right" class="grid_3">
+			<div id="right" class="grid_6">
 			    <div id="search">
 			    	<button></button>
 			    	<input type="text" value="search" />
 				</div>
-
 				<div id="valid">
 					<ul>
-						<li><a href="#"><h3>Sign In</h3></a></li>
-						<li><a href="#"><h4>Create New Account</h4></a></li>
+						<li><a href="#">Sign In</a></li>
+						<li><a href="#">Create New Account</a></li>
 					</ul>
 				</div>
 
 				<div id="cart">
-					<h2><center>Shopping Cart</center></h2></br>
+					Shopping Cart
+					<br />
 					<img src="../pict/cart-icon.jpg">
 					<LABEL></LABEL>
 				</div>
