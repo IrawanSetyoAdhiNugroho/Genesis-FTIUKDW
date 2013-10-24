@@ -1,6 +1,7 @@
 body {
   min-width: 960px;
-  background-color: black; 
+  font-family: arial;
+  font-size: 12px;
 }
 
 /* `Container
@@ -616,14 +617,13 @@ body {
 
 #navigation
 { 
-  background-color: #0066FF;
-  border-radius: 5px;
+  background-color: black;
 }
 
 #navigation ul li a{
   text-decoration: none;
-  color: black;
-  font-size: 15pt;
+  color: white;
+  font-size: 13pt;
   text-align: center;
 
 }
@@ -634,7 +634,7 @@ body {
 }
 
 #navigation ul li a:hover{
-  background-color: blue;
+  background-color: gray;
   border-radius: 5px;
 }
 
@@ -662,56 +662,41 @@ body {
 #SlideShow
 {
   border: 2px solid black;
-  margin-top: 20px;
-  margin-left: 40px;
+  margin-top: 15px;
+  margin-left: 25px;
 }
 
 #right
 {
   margin-top: 15px;
   float: right;
-  background-color: #3366FF;
 }
 
 #search{
-  margin:8px;
   border: 1px solid black;
   padding: 5px 15px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 #search button{
-  background:url('../pict/search.png');
+  background : url('search.png');
   width:20px;
-  height:auto;
-  margin-right: 5px;
+  height:20px;
 }
 
 #search input{
   border: 1px solid black;
-  width: 150px;
-  padding: 0px auto;
-}
-
-#cart img{
-  margin : 0px 5px 10px 45px;
-  width:45px;
-  height:45px;
+  width: 120px;
+  margin: 0px;
 }
 
 #valid
 {
-  margin:8px;
   border: 1px solid black;
   border-radius: 5px;
-}
+  margin-bottom: 10px;
 
-#cart
-{
-  margin:8px;
-  border: 1px solid black;
-  border-radius: 5px;
-  text-align: center;
 }
 
 #valid ul li
@@ -724,30 +709,46 @@ body {
   text-align: left;
 }
 
-#search button{
-  background:url('../pict/search.png');
-  width:20px;
-  height:auto;
-}
-
-#search input{
-  border: 1px solid black;
-}
-
 #cart img{
   margin : 10px;
   width:45px;
   height:auto;
 }
+#cart img{
+  margin : 0px 5px 10px 45px;
+  width:45px;
+  height:45px;
+}
+
+#cart
+{
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+#footer
+{
+  background-color: black;
+  margin-top: 15px;
+}
+
+#footer-detail a
+{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
 
 dt{
-  background-color: #0066FF;
+  background-color: black;
 }
 
 dt a{
   color: #FFF;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 dd a{
