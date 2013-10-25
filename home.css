@@ -617,7 +617,9 @@ body {
 
 #navigation
 { 
-  background-color: black;
+  background-color:black;
+  height: 40px;
+  border-radius: 5px;
 }
 
 #navigation ul li a{
@@ -693,7 +695,7 @@ body {
 
 #valid
 {
-  border: 1px solid black;
+  
   border-radius: 5px;
   margin-bottom: 10px;
 
@@ -734,6 +736,7 @@ body {
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 10px;
+  font-style: none;
 }
 
 #footer
@@ -757,10 +760,9 @@ dt{
   background-image: -ms-linear-gradient(top, black, gray);
   background-image: -o-linear-gradient(top, black, gray);
 
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
 }
 
 dt a{
