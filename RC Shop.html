@@ -3,9 +3,10 @@
 
 	<head>
 		<title>Home</title>
-		
+	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="960_24_col.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 
 	<body>
@@ -85,10 +86,12 @@
 			    	<input type="text" value="search" />
 				</div>
 				<div id="valid">
-					<ul>
-						<li><a href="#">Sign In</a></li>
-						<li><a href="#">Create New Account</a></li>
-					</ul>
+					<form id="login" >
+						<label for="username">username</label><input type="text" name="username" class="placeholder" placeholder="Charles_H">
+						<label for="password">password</label><input type="password" name="password" class="placeholder" placeholder="password">
+						<input type="submit" value="Log In">
+						<input type="submit" value="Sign up">
+					</form>
 				</div>
 
 				<div id="cart">
@@ -97,7 +100,7 @@
 					<img src="chart.jpg">
 					<LABEL></LABEL>
 				</div>
-				
+
 				<div id="socialmedia" class="grid_5">
 					<ul>
 						<li><a href=""> <img src="facebook.jpg"> Facebook</a></li>
@@ -108,7 +111,7 @@
 
 			<div id="footer" class="grid_24">
 				<div id="footer-detail">
-					<a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a>
+					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
 				</div>
 			</div>
 
