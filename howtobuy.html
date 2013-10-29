@@ -1,11 +1,14 @@
+
+
 <!DOCTYPE html>
 <html>
 
 	<head>
-		<title>How to Buy</title>
+		<title>Home</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="960_24_col.css" type="text/css"/>
+
 	</head>
 
 	<body>
@@ -13,12 +16,16 @@
 			<div id="header" class="grid_24">
   <!-- Kode harus berada di dalam class container_12 -->
   				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
+  				<div id="search" class="grid_5">
+			    	<button></button> 
+			    	<input type="text" value="search" />
+				</div>
   			</div>
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="#" class="grid_4"><strong>HOME</strong></a></li>
-					<li><a herf="howtobuy.html" class="grid_4"><strong>HOW TO BUY</strong></a></li>
+					<li><a href="home.php" class="grid_4"><strong>HOME</strong></a></li>
+					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
@@ -26,6 +33,7 @@
 			</div>
 
 			<div id="allcategory" class="grid_4">
+				
 				<dl>
 					<dt> <a href="#"> Cars </a> </dt>
 						<dd>
@@ -73,9 +81,10 @@
 							</ul>
 						</dd>
 				</dl>
+
 			</div>
 
-			<div id="SlideShow" class="grid_14">
+			<div id="howtobuy" class="grid_14">
 				<center><h1>HOW TO BUY AT RC SHOP</h1></center>
 				<ol>
 					<li>Jika anda belum memiliki akun maka Anda dapat mendaftar terlebih dahulu di web kami dengan mengisikan data- data yang diminta dengan benar.  Tapi jika anda sudah memiliki akun, anda bisa sign in terlebi dahulu. </li>
@@ -92,32 +101,34 @@
 			</div>
 
 			<div id="right" class="grid_5">
-			    <div id="search">
-			    	<button></button> 
-			    	<input type="text" value="search" />
-				</div>
+			    
 				<div id="valid">
-					<form id="login" >
-						<label for="username">username</label><input type="text" name="username" class="placeholder" placeholder="Charles_H">
-						<label for="password">password</label><input type="password" name="password" class="placeholder" placeholder="password">
-						<input type="submit" value="Log In">
-						<input type="submit" value="Sign up">
+					<form id='login' action='login.php' method='post' accept-charset='UTF-8' >
+						<fieldset >
+							<legend>Login</legend>
+							<input type='hidden' name='submitted' id='submitted' value='1'/>
+							<label for="username">username</label><input type="text" name="username" id='username' username="Charles_H"maxlength="50" >
+							<label for="password">password</label><input type="password" name="password" id='password' maxlength="50" password="password">
+							<input type="submit" name='Submit' value="Log In">
+							<br><br>Doesn't have account? <br><a href="signup.php">Sign Up</a>
+						</fieldset>
 					</form>
 				</div>
 
 				<div id="cart">
-					Shopping Cart
+					<h3>Shopping Cart</h3>
 					<br />
 					<img src="chart.jpg">
 					<LABEL></LABEL>
 				</div>
-
 				<div id="socialmedia" class="grid_5">
-					<ul>
-						<li><a href=""> <img src="facebook.jpg"> Facebook</a></li>
-						<li><a href=""> <img src="twitter.jpg"> Twitter</a></li>
-					</ul>
+					<center><strong>Like or Follow us:</strong>
+						<br><br>
+						<a href=""> <img src="facebook.jpg" width="35"></a><span></span>
+						<a href=""> <img src="twitter.jpg"width="35"></a>
+					</center>
 				</div>
+				
 			</div>
 
 			<div id="footer" class="grid_24">
