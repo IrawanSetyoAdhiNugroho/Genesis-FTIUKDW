@@ -12,7 +12,6 @@
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
-  <!-- Kode harus berada di dalam class container_12 -->
   				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
   				<div id="search" class="grid_5">
 			    	<button></button> 
