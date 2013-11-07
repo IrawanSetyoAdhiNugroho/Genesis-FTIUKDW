@@ -83,7 +83,26 @@
 			</div>
 
 			<div id="SlideShow" class="grid_14">
-				
+				<div id="wowslider-container1">
+						<div class="ws_images"><ul>
+					<li><img src="data1/images/desainprogweb.jpg" alt="DESAINPROGWEB" title="DESAINPROGWEB" id="wows1_0"/></li>
+					<li><img src="data1/images/1.jpg" alt="1" title="1" id="wows1_1"/></li>
+					<li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_2"/></li>
+					<li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_3"/></li>
+					</ul>
+				</div>
+				<div class="ws_bullets">
+					<div>
+					<a href="#" title="DESAINPROGWEB"><img src="data1/tooltips/desainprogweb.jpg" alt="DESAINPROGWEB"/>1</a>
+					<a href="#" title="1"><img src="data1/tooltips/1.jpg" alt="1"/>2</a>
+					<a href="#" title="2"><img src="data1/tooltips/2.jpg" alt="2"/>3</a>
+					<a href="#" title="3"><img src="data1/tooltips/3.jpg" alt="3"/>4</a>
+					</div>
+				</div>
+				<span class="wsl"><a href="http://wowslider.com">HTML Slider Control</a> by WOWSlider.com v4.7</span>
+				<a href="#" class="ws_frame"></a>
+				<div class="ws_shadow"></div>
+				</div>	
 			</div>
 			<div id="right" class="grid_5">
 			    
