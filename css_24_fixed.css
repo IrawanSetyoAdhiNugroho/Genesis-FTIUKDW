@@ -610,9 +610,14 @@ body {
   zoom: 1;
 }
 
-#wrap
+#header
 {
-  background-color: white;
+  background: url(http://www.duniainter.net/wp-content/uploads/2013/06/Background-Power-Point-Old-Grunge-Vintage-Texture.jpg);
+}
+
+#wrap{
+  background: url();
+  background-color: rgb(255, 248, 220);
 }
 
 #search{
@@ -636,7 +641,7 @@ body {
 
 #navigation
 { 
-  background-color:black;
+  background-color:rgb(139, 69 ,19);
   height: 40px;
   border-radius: 5px;
 }
@@ -655,7 +660,7 @@ body {
 }
 
 #navigation ul li a:hover{
-  background-color: gray;
+  background-color: rgb(222, 184 ,135);
   border-radius: 5px;
 }
 
@@ -663,6 +668,7 @@ body {
 {
   margin-top: 3px;
 }
+
 
 #allcategory li 
 {
@@ -741,7 +747,7 @@ body {
 
 #footer
 {
-  background-color: black;
+  background-color:rgb(139, 69 ,19);
   margin-top: 15px;
 }
 
@@ -753,12 +759,12 @@ body {
 }
 
 dt{
-  background-color:black;
-  background-image: -webkit-gradient(linear, 0% 0%,0% 0%, from(black), to(gray));
-  background-image: -webkit-linear-gradient(top, black, gray);
-  background-image: -moz-linear-gradient(top, black, gray);
-  background-image: -ms-linear-gradient(top, black, gray);
-  background-image: -o-linear-gradient(top, black, gray);
+  background-color:rgb(139, 69 ,19);
+  background-image: -webkit-gradient(linear, 0% 0%,0% 0%, from(rgb(139, 69 ,19)), to(gray));
+  background-image: -webkit-linear-gradient(top, rgb(139, 69 ,19);, gray);
+  background-image: -moz-linear-gradient(top, rgb(139, 69 ,19);, gray);
+  background-image: -ms-linear-gradient(top, rgb(139, 69 ,19);, gray);
+  background-image: -o-linear-gradient(top, rgb(139, 69 ,19);, gray);
 
     border-radius:5px;
     -webkit-border-radius:5px;
