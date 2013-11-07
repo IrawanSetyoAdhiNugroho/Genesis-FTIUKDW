@@ -6,8 +6,9 @@
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="css_24_fixed.css" type="text/css"/>
-
-	</head>
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
@@ -82,9 +83,8 @@
 			</div>
 
 			<div id="SlideShow" class="grid_14">
-				<img src="GambarCarprogweb/1.jpg" width="500"/>
+				
 			</div>
-
 			<div id="right" class="grid_5">
 			    
 				<div id="valid">
@@ -115,43 +115,6 @@
 					</center>
 				</div>
 			</div>
-<!--Masih acak-acakan-->
-<div id="container">
-		<?php
-			//buat code untuk upload gambar, pindahkan file yang diupload ke images/
-			//  dengan nama avatar.png
-
-			if(isset($_FILES["upload"])){
-					
-					$directoryPath="images/";
-
-					if($_FILES["upload"]["type"]=="image/png" || $_FILES["upload"]["type"]=="image/jpeg" || $_FILES["upload"]["type"]=="image/jpg" || $_FILES["upload"]["type"]=="image/gif"){
-						move_uploaded_file($_FILES["upload"]["tmp_name"], $directoryPath."avatar.png");
-					}
-				}
-
-			//code untuk remove avatar
-			//JANGAN DIHAPUS
-			if(isset($_GET["del"])){$dir = "images/";$files = scandir($dir);foreach ($files as $key => $value){if($value == "avatar.png"){$file = $value;break;}}if(isset($file)){$file = NULL;unlink("images/avatar.png");}}
-
-		?>
-
-		<div id="left">
-			<img id="avatar" src="images/
-				<?php
-					$dir = "images/";$files = scandir($dir);foreach ($files as $key => $value){if ($key == 0 || $key == 1)continue;else{if($value == "avatar.png"){$file = $value;break;}}}if(isset($file))echo $file;else echo "default.png";
-				?>"
-			/>
-			<br />
-			<form action="Home_960.php" method="post" enctype="multipart/form-data">
-				<input class="upload" type="file" name="upload" size="60"></input>
-				<br />
-				<input class="button" type="submit" value="Upload"></input>
-				<a href="index.php?del=ava">
-					<input class="button" type="button" value="Remove"></input>
-				</a>
-			</form>
-		</div>
 
 
 		<div id="right">
