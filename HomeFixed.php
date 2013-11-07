@@ -22,8 +22,8 @@
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="#" class="grid_4"><strong>HOME</strong></a></li>
-					<li><a herf="howtobuy.html" class="grid_4"><strong>HOW TO BUY</strong></a></li>
+					<li><a href="homefixed.php" class="grid_4"><strong>HOME</strong></a></li>
+					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
@@ -102,7 +102,7 @@
 				<span class="wsl"><a href="http://wowslider.com">HTML Slider Control</a> by WOWSlider.com v4.7</span>
 				<a href="#" class="ws_frame"></a>
 				<div class="ws_shadow"></div>
-				</div>	
+			</div>
 			</div>
 			<div id="right" class="grid_5">
 			    
