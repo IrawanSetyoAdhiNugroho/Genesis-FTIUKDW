@@ -79,7 +79,21 @@
 
 			</div>
 
-			
+			<div id="howtobuy" class="grid_14">
+				<center><h1>HOW TO BUY AT RC SHOP</h1></center>
+				<ol>
+					<li>Jika anda belum memiliki akun maka Anda dapat mendaftar terlebih dahulu di web kami dengan mengisikan data- data yang diminta dengan benar.  Tapi jika anda sudah memiliki akun, anda bisa sign in terlebi dahulu. </li>
+					<li>Setelah pembuatan akun selesai atau setelah anda sign in, anda dapat melihat- lihat barang- barang yang dijual di web kami. </li>
+					<li>Pilih barang yang ingin anda beli dengan menekan tombol buy </li>
+					<li>Setelah menekan tombol buy, anda akan diminta mengisikan beberapa pertanyaan mengenai paket kiriman yang anda pilih, cara pembayaran dan alamat barang dikirim.  Setelah selesai klik done.</li>
+					<li>Anda dapat segera mentransfer sejumlah yang harus dibayarkan ke rekening kami kurang dari 24 jam. </li>
+					<li>Setelah melakukan pembayaran anda dapat membuka profile anda dan mengklik gambar jam pasir di bagian Purchase Product.</li>
+					<li>Anda akan diminta memasukkan nomer transaksi. Setelah memasukkan nomor transaksi maka kami akan mengubah status pesanan anda. </li>
+					<li>Anda dapat menunggu hingga barang dikirim ke alamat anda.</li>
+					<li>Setelah barang diterima silahkan berikan testimony di web kami. </li>
+				</ol>
+				<center><h4>Terima kasih atas kepercayaan anda terhadap RC-Shop.com </h4></center>
+			</div>
 			<div id="right" class="grid_5">
 			    
 				<div id="valid">
