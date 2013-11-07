@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -7,14 +5,11 @@
 		<title>Home</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="960_24_col.css" type="text/css"/>
-
-	</head>
+		<link rel="stylesheet" href="css_24_fixed.css" type="text/css"/>
 
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
-  <!-- Kode harus berada di dalam class container_12 -->
   				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
   				<div id="search" class="grid_5">
 			    	<button></button> 
@@ -24,7 +19,7 @@
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="home.php" class="grid_4"><strong>HOME</strong></a></li>
+					<li><a href="homefixed.php" class="grid_4"><strong>HOME</strong></a></li>
 					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
@@ -84,22 +79,7 @@
 
 			</div>
 
-			<div id="howtobuy" class="grid_14">
-				<center><h1>HOW TO BUY AT RC SHOP</h1></center>
-				<ol>
-					<li>Jika anda belum memiliki akun maka Anda dapat mendaftar terlebih dahulu di web kami dengan mengisikan data- data yang diminta dengan benar.  Tapi jika anda sudah memiliki akun, anda bisa sign in terlebi dahulu. </li>
-					<li>Setelah pembuatan akun selesai atau setelah anda sign in, anda dapat melihat- lihat barang- barang yang dijual di web kami. </li>
-					<li>Pilih barang yang ingin anda beli dengan menekan tombol buy </li>
-					<li>Setelah menekan tombol buy, anda akan diminta mengisikan beberapa pertanyaan mengenai paket kiriman yang anda pilih, cara pembayaran dan alamat barang dikirim.  Setelah selesai klik done.</li>
-					<li>Anda dapat segera mentransfer sejumlah yang harus dibayarkan ke rekening kami kurang dari 24 jam. </li>
-					<li>Setelah melakukan pembayaran anda dapat membuka profile anda dan mengklik gambar jam pasir di bagian Purchase Product.</li>
-					<li>Anda akan diminta memasukkan nomer transaksi. Setelah memasukkan nomor transaksi maka kami akan mengubah status pesanan anda. </li>
-					<li>Anda dapat menunggu hingga barang dikirim ke alamat anda.</li>
-					<li>Setelah barang diterima silahkan berikan testimony di web kami. </li>
-				</ol>
-				<center><h4>Terima kasih atas kepercayaan anda terhadap RC-Shop.com </h4></center>
-			</div>
-
+			
 			<div id="right" class="grid_5">
 			    
 				<div id="valid">
@@ -110,7 +90,7 @@
 							<label for="username">username</label><input type="text" name="username" id='username' username="Charles_H"maxlength="50" >
 							<label for="password">password</label><input type="password" name="password" id='password' maxlength="50" password="password">
 							<input type="submit" name='Submit' value="Log In">
-							<br><br>Doesn't have account? <br><a href="signup.php">Sign Up</a>
+							<br><br>Doesn't have account? <br><a href="#">Sign Up</a>
 						</fieldset>
 					</form>
 				</div>
@@ -121,16 +101,59 @@
 					<img src="chart.jpg">
 					<LABEL></LABEL>
 				</div>
-				<div id="socialmedia" class="grid_5">
+
+				<div id="socialmedia">
 					<center><strong>Like or Follow us:</strong>
 						<br><br>
 						<a href=""> <img src="facebook.jpg" width="35"></a><span></span>
 						<a href=""> <img src="twitter.jpg"width="35"></a>
 					</center>
 				</div>
-				
 			</div>
 
+
+		<div id="right">
+			<span id="status">
+				<?php
+
+				if(isset($_FILES["status"])){
+					echo " ".$_FILES["status"]["text"];
+					$directoryPath="status/";
+			
+				}
+
+					//code untuk menampilkan status
+					//jika belum ada status yang dipost, munculkan status "avaible"
+					//jika ada status yang dipost oleh user, tampilkan status tersebut dengan:
+					//  semua vokal menjadi 'a'
+					//  karakter indeks terakhir ditampilkan sebanyak 5x
+
+					/*
+					  HINT
+					  untuk mengakses karakter dalam string bisa digunakan indexing
+					  contoh $nama = "nico"
+					  maka nilai
+						$nama[0] adalah 'n', 
+						$nama[1] adalah 'i', 
+						$nama[2] adalah 'c', 
+						$nama[3] adalah 'o' 
+					  untuk mengetahui panjang suatu string, dapat digunakan fungsi strlen( variabel_string )
+					  contohnya: $panjang = strlen($nama), maka nilai $panjang adalah 4
+					*/
+
+				?>
+			</span>
+			
+			<form action="#" method="post" enctype="multipart/form-data">
+				<input id="post" type="text" name="status" size="30" placeholder="Sar up?"></input>
+				<br />
+				<br />
+				<input class="button" type="submit" value="Post"></input>
+			</form>
+
+		</div>
+	</div>
+	<!--BATAS ATAS!-->
 			<div id="footer" class="grid_24">
 				<div id="footer-detail">
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
@@ -140,5 +163,4 @@
 		</div>
 	</body>
 
-</html>
-
+</html>			
