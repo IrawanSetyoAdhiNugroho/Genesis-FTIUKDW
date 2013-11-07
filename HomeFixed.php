@@ -136,48 +136,7 @@
 			</div>
 
 
-		<div id="right">
-			<span id="status">
-				<?php
-
-				if(isset($_FILES["status"])){
-					echo " ".$_FILES["status"]["text"];
-					$directoryPath="status/";
-			
-				}
-
-					//code untuk menampilkan status
-					//jika belum ada status yang dipost, munculkan status "avaible"
-					//jika ada status yang dipost oleh user, tampilkan status tersebut dengan:
-					//  semua vokal menjadi 'a'
-					//  karakter indeks terakhir ditampilkan sebanyak 5x
-
-					/*
-					  HINT
-					  untuk mengakses karakter dalam string bisa digunakan indexing
-					  contoh $nama = "nico"
-					  maka nilai
-						$nama[0] adalah 'n', 
-						$nama[1] adalah 'i', 
-						$nama[2] adalah 'c', 
-						$nama[3] adalah 'o' 
-					  untuk mengetahui panjang suatu string, dapat digunakan fungsi strlen( variabel_string )
-					  contohnya: $panjang = strlen($nama), maka nilai $panjang adalah 4
-					*/
-
-				?>
-			</span>
-			
-			<form action="#" method="post" enctype="multipart/form-data">
-				<input id="post" type="text" name="status" size="30" placeholder="Sar up?"></input>
-				<br />
-				<br />
-				<input class="button" type="submit" value="Post"></input>
-			</form>
-
-		</div>
-	</div>
-	<!--BATAS ATAS!-->
+		
 			<div id="footer" class="grid_24">
 				<div id="footer-detail">
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
