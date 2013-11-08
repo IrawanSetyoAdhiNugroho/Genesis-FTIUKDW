@@ -2,11 +2,10 @@
 <html>
 
 	<head>
-		<title>Home</title>
+		<title>F1</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="css_24_fixed.css" type="text/css"/>
-		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<link rel="stylesheet" href="cssblue.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
 		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
 
@@ -24,8 +23,8 @@
 				<ul>
 					<li><a href="homefixed.php" class="grid_4"><strong>HOME</strong></a></li>
 					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
+					<li><a href="aboutus.php" class="grid_4"><strong>ABOUT US</strong></a></li>
+					<li><a href="testimony.php" class="grid_4"><strong>TESTIMONY</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
 				</ul>
 			</div>
@@ -36,19 +35,19 @@
 					<dt> <a href="#"> Cars </a> </dt>
 						<dd>
 							<ul>
-								<li><a href="Sport.html"> Sport</a></li>
-								<li><a href="#"> F1 </a></li>
-								<li><a href="#"> SUV</a></li>
-								<li><a href="#"> MPV</a></li>
-								<li><a href="#"> Truck</a></li>
-								<li><a href="#"> Sedan</a></li>
+								<li><a href="SPORT.php"> Sport</a></li>
+								<li><a href="F1.php"> F1 </a></li>
+								<li><a href="SUV.php"> SUV</a></li>
+								<li><a href="MPV.php"> MPV</a></li>
+								<li><a href="TRUCK.php"> Truck</a></li>
+								<li><a href="SEDAN.php"> Sedan</a></li>
 							</ul>
 						</dd>
 
 					<dt> <a href="#"> Bike </a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Motorcycle</a></li>
+								<li><a href="MTR.php">Motorcycle</a></li>
 								
 							</ul>
 						</dd>
@@ -56,8 +55,8 @@
 					<dt> <a href="#"> Air Force</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Helicopter</a></li>
-								<li><a href="#">Jet</a></li>
+								<li><a href="HELI.php">Helicopter</a></li>
+								<li><a href="JET.php">Jet</a></li>
 			
 							</ul>
 						</dd>
@@ -65,8 +64,8 @@
 					<dt> <a href="#"> Water Adventure</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Ship</a></li>
-								<li><a href="#">Boat</a></li>
+								<li><a href="SHIP.php">Ship</a></li>
+								<li><a href="BOAT.php">Boat</a></li>
 								
 							</ul>
 						</dd>
@@ -74,8 +73,8 @@
 					<dt> <a href="#"> Tank</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Leopard</a></li>
-								<li><a href="#">Tiger Fighter</a></li>
+								<li><a href="LEO.php">Leopard</a></li>
+								<li><a href="TIGER.php">Tiger Fighter</a></li>
 							</ul>
 						</dd>
 				</dl>
@@ -103,7 +102,16 @@
 				<a href="#" class="ws_frame"></a>
 				<div class="ws_shadow"></div>
 			</div>
-			</div>
+			
+
+			<div id="sport" class="grid_14">
+                <img id="border" src = "data1/images/desainprogweb.jpg" class="grid_4"/>
+
+                <img id="border" src = "data1/images/desainprogweb.jpg" class="grid_4"/>
+
+                <img id="border" src = "data1/images/desainprogweb.jpg" class="grid_4"/>
+            </div>
+            </div>	
 			<div id="right" class="grid_5">
 			    
 				<div id="valid">
@@ -129,8 +137,8 @@
 				<div id="socialmedia">
 					<center><strong>Like or Follow us:</strong>
 						<br><br>
-						<a href=""> <img src="facebook.jpg" width="35"></a><span></span>
-						<a href=""> <img src="twitter.jpg"width="35"></a>
+						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="facebook.jpg" width="35"></a><span></span>
+						<a href="https://twitter.com/CosmicRcShop"> <img src="twitter.jpg"width="35"></a>
 					</center>
 				</div>
 			</div>
@@ -147,4 +155,6 @@
 	</body>
 
 </html>
+
+
 
