@@ -81,7 +81,7 @@
 
 			</div>
 
-			<div id="sport" class="grid_14">
+			<div id="sport" class="grid_15">
 				<div>
                 <img id="border" src = "gambarjetprogweb/ape1.jpg" class="grid_4"/>
             	</div>
