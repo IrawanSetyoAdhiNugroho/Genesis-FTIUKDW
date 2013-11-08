@@ -866,5 +866,6 @@ dd a{
 
 #sport img{
   margin: 15px 23px 10px 10px;
-
+  width: 110px;
+  height: 100px;
 }
