@@ -1,3 +1,7 @@
+<?php
+	include("koneksi.php");
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +11,7 @@
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
+		<script type="text/javascript" src="jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
@@ -15,7 +19,7 @@
   				<a href="#"><img src="images/DESAINPROGWEB.png" width="200"/></a>
   			<div id="search" class="grid_5">
 			   	<img src="images/search.png" width="18"> 
-			   	<input type="text" value="search" />
+			   	<input type="text" value="pencarian" />
 			</div>
   			</div>
 
@@ -84,10 +88,9 @@
 			<div id="SlideShow" class="grid_14">
 				<div id="wowslider-container1">
 						<div class="ws_images"><ul>
-					<li><img src="images/slider/desainprogweb.jpg" alt="DESAINPROGWEB" title="DESAINPROGWEB" id="wows1_0"/></li>
-					<li><img src="images/slider/1.jpg" alt="1" title="1" id="wows1_1"/></li>
-					<li><img src="images/slider/2.jpg" alt="2" title="2" id="wows1_2"/></li>
-					<li><img src="images/slider/3.jpg" alt="3" title="3" id="wows1_3"/></li>
+					<li><img src="images/slider/1.jpg" alt="DESAINPROGWEB" title="DESAINPROGWEB" id="wows1_0"/></li>
+					<li><img src="images/slider/2.jpg" alt="1" title="1" id="wows1_1"/></li>
+					<li><img src="images/slider/3.jpg" alt="2" title="2" id="wows1_2"/></li>
 					</ul>
 				</div>
 				<div class="ws_bullets">
@@ -105,13 +108,10 @@
 			
 
 			<div id="sport" class="grid_15">
-                <img id="border" src = "images/slider/desainprogweb.jpg" class="grid_4"/>
-
-                <img id="border" src = "images/slider/desainprogweb.jpg" class="grid_4"/>
-
-                <img id="border" src = "images/slider/desainprogweb.jpg" class="grid_4"/>
-
-                <img id="border" src = "images/slider/desainprogweb.jpg" class="grid_4"/>
+                <img id="border" src = "images/ngisor/1.jpg" class="grid_4"/>
+                <img id="border" src = "images/ngisor/2.jpg" class="grid_4"/>
+                <img id="border" src = "images/ngisor/3.jpeg" class="grid_4"/>
+                <img id="border" src = "images/ngisor/4.jpg" class="grid_4"/>
             </div>
             </div>	
 			<div id="right" class="grid_5">
@@ -126,7 +126,6 @@
 						</fieldset>
 					</form>
 					<?php
-						include("koneksi.php");
 						if(isset($_POST['submit']))
 						{
 							$username = $_POST['username'];
@@ -155,7 +154,7 @@
 		
 				</div>
 
-				<div id="images/cart" >
+				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
 					<img src="images/chart.jpg" width="35">
@@ -163,7 +162,7 @@
 				</div>
 
 				<div id="socialmedia">
-					<center><strong>Like atau Follow us:</strong>
+					<center><strong>Like dan Follow kami:</strong>
 						<br><br>
 						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="images/facebook.jpg" width="35"></a><span></span>
 						<a href="https://twitter.com/CosmicRcShop"> <img src="images/twitter.jpg"width="35"></a>
