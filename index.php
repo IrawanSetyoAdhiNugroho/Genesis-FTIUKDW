@@ -21,7 +21,7 @@
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="homefixed.php" class="grid_4"><strong>Beranda</strong></a></li>
+					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
 					<li><a href="howtobuy.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
 					<li><a href="testimony.php" class="grid_4"><strong>Testimoni</strong></a></li>
@@ -116,7 +116,7 @@
             </div>	
 			<div id="right" class="grid_5">
 				<div id="valid"> 
-					<form method="POST" action="HomeFixed.php">
+					<form method="POST" action="index.php">
 						<fieldset >
 							<legend>Masuk</legend>
 							<label for="username">Email</label><input type="text" name="username">
