@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>SPORT</title>
+		<title>ADMIN</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="cssblue.css" type="text/css"/>
@@ -81,12 +81,12 @@
 
 			</div>
 <div id="sport" class="grid_14">
-				<form action="upload.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
-  <p>Judul Gambar :
+				<form action="admin.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <p>Judul Gambar :<br>
     <input name="judul_gambar" type="text" id="judul_gambar" size="30" maxlength="30" />
   </p>
-  <p>Daftar Harga :
-  	<input name="harga_gambar" type="int" id="harga_gambar" size="30" maxlength="30" />
+  <p>Harga :<br>
+  	<input name="harga" type="int" id="harga_gambar" size="30" maxlength="30" />
   </p>
   <p>
     File Gambar
@@ -95,8 +95,19 @@
 </p>
 <select name="category">
 		<option value="sport">Sport</option>
+		<option value="f1">F1</option>
+		<option value="suv">Sport Utilities Vehicle</option>
+		<option value="mpv">Multi Propose Vihicle</option>
+		<option value="truck">Truck</option>
+		<option value="sedan">Sedan</option>
 		<option value="motorcycle">Motorcycle</option>
-		
+		<option value="helicopter">Helicopter</option>
+		<option value="jet">Jet</option>
+		<option value="ship">Ship</option>
+		<option value="boat">Boat</option>
+		<option value="leo">Leopard</option>
+		<option value="tiger">Tiger</option>
+
 	</select>
 
   <p>
@@ -125,7 +136,7 @@ if (!empty($_FILES["nama_file"]["tmp_name"]))
 			echo "<p><img src=\"$gambar\" width=\"200\"/></p>";
 			echo "<p>Judul Gambar : $judul_gambar</p>";
 			echo "<p>Category : $category_gambar</p>";
-			echo "<p>Harga : Rp. $harga_gambar</p>";  
+			echo "<p>Harga : $harga_gambar</p>";  
 		} else {
 		   echo "<p>Gambar gagal dikirim</p>";
 		}
