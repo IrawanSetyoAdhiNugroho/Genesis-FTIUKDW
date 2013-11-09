@@ -5,7 +5,7 @@
 		<title>MOTORCYCLE</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="cssblue.css" type="text/css"/>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
 		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
 
@@ -21,7 +21,7 @@
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="homefixed.php" class="grid_4"><strong>HOME</strong></a></li>
+					<li><a href="index.php" class="grid_4"><strong>HOME</strong></a></li>
 					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>ABOUT US</strong></a></li>
 					<li><a href="testimony.php" class="grid_4"><strong>TESTIMONY</strong></a></li>
