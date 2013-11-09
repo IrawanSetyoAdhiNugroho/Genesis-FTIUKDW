@@ -612,11 +612,14 @@ body {
 
 #header
 {
-  background: url(http://www.freefever.com/stock/latest-texture-full-hd-backgrounds-blue-by-lars-fredriksson.jpg);
+  background:  url(http://erikjohansson.org/wp-content/uploads/2012/10/checkered-flag-background.jpg);
+}
+body{
+  background-color: black;
 }
 
 #wrap{
-  background-color: rgb(230, 230, 250);
+  background-color: white;
 }
 
 #search{
