@@ -2,28 +2,30 @@
 <html>
 
 	<head>
-		<title>About us</title>
+		<title>About Us</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="css_24_fixed.css" type="text/css"/>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
-  				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
-  				<div id="search" class="grid_5">
-			    	<button></button> 
-			    	<input type="text" value="search" />
-				</div>
+  				<a href="#"><img src="images/DESAINPROGWEB.png" width="200"/></a>
+  			<div id="search" class="grid_5">
+			   	<img src="images/search.png" width="18"> 
+			   	<input type="text" value="search" />
+			</div>
   			</div>
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="homefixed.php" class="grid_4"><strong>HOME</strong></a></li>
-					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>ABOUT US</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>TESTIMONY</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
+					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
+					<li><a href="howtobuy.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
+					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
+					<li><a href="testimony.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
 				</ul>
 			</div>
 
@@ -33,19 +35,19 @@
 					<dt> <a href="#"> Cars </a> </dt>
 						<dd>
 							<ul>
-								<li><a href="Sport.html"> Sport</a></li>
-								<li><a href="#"> F1 </a></li>
-								<li><a href="#"> SUV</a></li>
-								<li><a href="#"> MPV</a></li>
-								<li><a href="#"> Truck</a></li>
-								<li><a href="#"> Sedan</a></li>
+								<li><a href="SPORT.php"> Sport</a></li>
+								<li><a href="F1.php"> F1 </a></li>
+								<li><a href="SUV.php"> SUV</a></li>
+								<li><a href="MPV.php"> MPV</a></li>
+								<li><a href="TRUCK.php"> Truck</a></li>
+								<li><a href="SEDAN.php"> Sedan</a></li>
 							</ul>
 						</dd>
 
 					<dt> <a href="#"> Bike </a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Motorcycle</a></li>
+								<li><a href="MTR.php">Motorcycle</a></li>
 								
 							</ul>
 						</dd>
@@ -53,8 +55,8 @@
 					<dt> <a href="#"> Air Force</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Helicopter</a></li>
-								<li><a href="#">Jet</a></li>
+								<li><a href="HELI.php">Helicopter</a></li>
+								<li><a href="JET.php">Jet</a></li>
 			
 							</ul>
 						</dd>
@@ -62,8 +64,8 @@
 					<dt> <a href="#"> Water Adventure</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Ship</a></li>
-								<li><a href="#">Boat</a></li>
+								<li><a href="SHIP.php">Ship</a></li>
+								<li><a href="BOAT.php">Boat</a></li>
 								
 							</ul>
 						</dd>
@@ -71,8 +73,8 @@
 					<dt> <a href="#"> Tank</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Leopard</a></li>
-								<li><a href="#">Tiger Fighter</a></li>
+								<li><a href="LEO.php">Leopard</a></li>
+								<li><a href="TIGER.php">Tiger Fighter</a></li>
 							</ul>
 						</dd>
 				</dl>
@@ -93,32 +95,58 @@
 				<h4 align="right">Admin</h4>
 			</div>
 			<div id="right" class="grid_5">
-			    
-				<div id="valid">
-					<form id='login' action='login.php' method='post' accept-charset='UTF-8' >
+				<div id="valid"> 
+					<form method="POST" action="index.php">
 						<fieldset >
-							<legend>Login</legend>
-							<input type='hidden' name='submitted' id='submitted' value='1'/>
-							<label for="username">username</label><input type="text" name="username" id='username' username="Charles_H"maxlength="50" >
-							<label for="password">password</label><input type="password" name="password" id='password' maxlength="50" password="password">
-							<input type="submit" name='Submit' value="Log In">
-							<br><br>Doesn't have account? <br><a href="#">Sign Up</a>
+							<legend>Masuk</legend>
+							<label for="username">Email</label><input type="text" name="username">
+							<label for="password">Sandi</label><input type="password" name="password">
+							<input type="submit" value="Masuk" name="submit">
+							<br><br>Belum punya akun ?<br><a href="#">Mendaftar</a>
 						</fieldset>
 					</form>
+					<?php
+						include("koneksi.php");
+						if(isset($_POST['submit']))
+						{
+							$username = $_POST['username'];
+							$password = $_POST['password'];
+							$query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+							$hasilquery = mysql_query($query);
+							$count = mysql_num_rows($hasilquery);
+
+							while ($data = mysql_fetch_assoc($hasilquery)) {
+								$admin = $data['admin'];
+							}
+
+							if($count == 0)
+								echo "username dan password salah";
+							else
+							{
+								session_start();
+								$_SESSION['user'] = $username;
+								if($admin == 1)
+								header("location:admin.php");
+								else if($admin == 0)
+								header("location:main.php");
+							}
+						}
+					?>
+		
 				</div>
 
-				<div id="cart">
-					<h3>Shopping Cart</h3>
+				<div id="images/cart" >
+					<h3>Keranjang Belanja</h3>
 					<br />
-					<img src="chart.jpg">
+					<img src="images/chart.jpg" width="35">
 					<LABEL></LABEL>
 				</div>
 
 				<div id="socialmedia">
-					<center><strong>Like or Follow us:</strong>
+					<center><strong>Like atau Follow us:</strong>
 						<br><br>
-						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="facebook.jpg" width="35"></a><span></span>
-						<a href="https://twitter.com/CosmicRcShop"> <img src="twitter.jpg"width="35"></a>
+						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="images/facebook.jpg" width="35"></a><span></span>
+						<a href="https://twitter.com/CosmicRcShop"> <img src="images/twitter.jpg"width="35"></a>
 					</center>
 				</div>
 			</div>
@@ -134,4 +162,5 @@
 		</div>
 	</body>
 
-</html>			
+</html>
+
