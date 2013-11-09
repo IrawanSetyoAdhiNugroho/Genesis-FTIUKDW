@@ -1,0 +1,1753 @@
+
+
+This repository
+Explore
+Gist
+Blog
+Help
+IrawanSetyoAdhiNugroho
+!
+You don't have any verified emails. We recommend verifying at least one email.
+Email verification helps our support team help you in case you have any email issues or lose your password.
+5  Unwatch
+Star 0 Fork 0PUBLIC IrawanSetyoAdhiNugroho / Genesis-FTIUKDW
+ branch: master  Genesis-FTIUKDW / cssblue.css 
+ tirtagraha 3 minutes ago Update cssblue.css
+3 contributors      
+ file 875 lines (685 sloc) 13.265 kb  Open EditRawBlameHistory Delete
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+body {
+  min-width: 960px;
+  font-family: arial;
+  font-size: 12px;
+}
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_13,
+.grid_14,
+.grid_15,
+.grid_16,
+.grid_17,
+.grid_18,
+.grid_19,
+.grid_20,
+.grid_21,
+.grid_22,
+.grid_23,
+.grid_24 {
+  display: inline;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15,
+.push_16, .pull_16,
+.push_17, .pull_17,
+.push_18, .pull_18,
+.push_19, .pull_19,
+.push_20, .pull_20,
+.push_21, .pull_21,
+.push_22, .pull_22,
+.push_23, .pull_23 {
+  position: relative;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
+
+/* `Grid >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .grid_1 {
+  width: 30px;
+  background-color: #FFFFFF;
+}
+
+.container_24 .grid_2 {
+  width: 70px;
+  background-color: #CCFFFF;
+}
+
+.container_24 .grid_3 {
+  width: 110px;
+  background-color: #99FFFF
+}
+
+.container_24 .grid_4 {
+  width: 150px;
+}
+
+.container_24 .grid_5 {
+  width: 190px;
+}
+
+.container_24 .grid_6 {
+  width: 230px;
+}
+
+.container_24 .grid_7 {
+  width: 270px;
+}
+
+.container_24 .grid_8 {
+  width: 310px;
+}
+
+.container_24 .grid_9 {
+  width: 350px;
+}
+
+.container_24 .grid_10 {
+  width: 390px;
+}
+
+.container_24 .grid_11 {
+  width: 430px;
+}
+
+.container_24 .grid_12 {
+  width: 470px;
+}
+
+.container_24 .grid_13 {
+  width: 510px;
+}
+
+.container_24 .grid_14 {
+  width: 550px;
+}
+
+.container_24 .grid_15 {
+  width: 590px;
+}
+
+.container_24 .grid_16 {
+  width: 630px;
+}
+
+.container_24 .grid_17 {
+  width: 670px;
+}
+
+.container_24 .grid_18 {
+  width: 710px;
+}
+
+.container_24 .grid_19 {
+  width: 750px;
+}
+
+.container_24 .grid_20 {
+  width: 790px;
+}
+
+.container_24 .grid_21 {
+  width: 830px;
+}
+
+.container_24 .grid_22 {
+  width: 870px;
+}
+
+.container_24 .grid_23 {
+  width: 910px;
+}
+
+.container_24 .grid_24 {
+  width: 950px;
+}
+
+/* `Prefix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .prefix_1 {
+  padding-left: 40px;
+}
+
+.container_24 .prefix_2 {
+  padding-left: 80px;
+}
+
+.container_24 .prefix_3 {
+  padding-left: 120px;
+}
+
+.container_24 .prefix_4 {
+  padding-left: 160px;
+}
+
+.container_24 .prefix_5 {
+  padding-left: 200px;
+}
+
+.container_24 .prefix_6 {
+  padding-left: 240px;
+}
+
+.container_24 .prefix_7 {
+  padding-left: 280px;
+}
+
+.container_24 .prefix_8 {
+  padding-left: 320px;
+}
+
+.container_24 .prefix_9 {
+  padding-left: 360px;
+}
+
+.container_24 .prefix_10 {
+  padding-left: 400px;
+}
+
+.container_24 .prefix_11 {
+  padding-left: 440px;
+}
+
+.container_24 .prefix_12 {
+  padding-left: 480px;
+}
+
+.container_24 .prefix_13 {
+  padding-left: 520px;
+}
+
+.container_24 .prefix_14 {
+  padding-left: 560px;
+}
+
+.container_24 .prefix_15 {
+  padding-left: 600px;
+}
+
+.container_24 .prefix_16 {
+  padding-left: 640px;
+}
+
+.container_24 .prefix_17 {
+  padding-left: 680px;
+}
+
+.container_24 .prefix_18 {
+  padding-left: 720px;
+}
+
+.container_24 .prefix_19 {
+  padding-left: 760px;
+}
+
+.container_24 .prefix_20 {
+  padding-left: 800px;
+}
+
+.container_24 .prefix_21 {
+  padding-left: 840px;
+}
+
+.container_24 .prefix_22 {
+  padding-left: 880px;
+}
+
+.container_24 .prefix_23 {
+  padding-left: 920px;
+}
+
+/* `Suffix Extra Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .suffix_1 {
+  padding-right: 40px;
+}
+
+.container_24 .suffix_2 {
+  padding-right: 80px;
+}
+
+.container_24 .suffix_3 {
+  padding-right: 120px;
+}
+
+.container_24 .suffix_4 {
+  padding-right: 160px;
+}
+
+.container_24 .suffix_5 {
+  padding-right: 200px;
+}
+
+.container_24 .suffix_6 {
+  padding-right: 240px;
+}
+
+.container_24 .suffix_7 {
+  padding-right: 280px;
+}
+
+.container_24 .suffix_8 {
+  padding-right: 320px;
+}
+
+.container_24 .suffix_9 {
+  padding-right: 360px;
+}
+
+.container_24 .suffix_10 {
+  padding-right: 400px;
+}
+
+.container_24 .suffix_11 {
+  padding-right: 440px;
+}
+
+.container_24 .suffix_12 {
+  padding-right: 480px;
+}
+
+.container_24 .suffix_13 {
+  padding-right: 520px;
+}
+
+.container_24 .suffix_14 {
+  padding-right: 560px;
+}
+
+.container_24 .suffix_15 {
+  padding-right: 600px;
+}
+
+.container_24 .suffix_16 {
+  padding-right: 640px;
+}
+
+.container_24 .suffix_17 {
+  padding-right: 680px;
+}
+
+.container_24 .suffix_18 {
+  padding-right: 720px;
+}
+
+.container_24 .suffix_19 {
+  padding-right: 760px;
+}
+
+.container_24 .suffix_20 {
+  padding-right: 800px;
+}
+
+.container_24 .suffix_21 {
+  padding-right: 840px;
+}
+
+.container_24 .suffix_22 {
+  padding-right: 880px;
+}
+
+.container_24 .suffix_23 {
+  padding-right: 920px;
+}
+
+/* `Push Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .push_1 {
+  left: 40px;
+}
+
+.container_24 .push_2 {
+  left: 80px;
+}
+
+.container_24 .push_3 {
+  left: 120px;
+}
+
+.container_24 .push_4 {
+  left: 160px;
+}
+
+.container_24 .push_5 {
+  left: 200px;
+}
+
+.container_24 .push_6 {
+  left: 240px;
+}
+
+.container_24 .push_7 {
+  left: 280px;
+}
+
+.container_24 .push_8 {
+  left: 320px;
+}
+
+.container_24 .push_9 {
+  left: 360px;
+}
+
+.container_24 .push_10 {
+  left: 400px;
+}
+
+.container_24 .push_11 {
+  left: 440px;
+}
+
+.container_24 .push_12 {
+  left: 480px;
+}
+
+.container_24 .push_13 {
+  left: 520px;
+}
+
+.container_24 .push_14 {
+  left: 560px;
+}
+
+.container_24 .push_15 {
+  left: 600px;
+}
+
+.container_24 .push_16 {
+  left: 640px;
+}
+
+.container_24 .push_17 {
+  left: 680px;
+}
+
+.container_24 .push_18 {
+  left: 720px;
+}
+
+.container_24 .push_19 {
+  left: 760px;
+}
+
+.container_24 .push_20 {
+  left: 800px;
+}
+
+.container_24 .push_21 {
+  left: 840px;
+}
+
+.container_24 .push_22 {
+  left: 880px;
+}
+
+.container_24 .push_23 {
+  left: 920px;
+}
+
+/* `Pull Space >> 24 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_24 .pull_1 {
+  left: -40px;
+}
+
+.container_24 .pull_2 {
+  left: -80px;
+}
+
+.container_24 .pull_3 {
+  left: -120px;
+}
+
+.container_24 .pull_4 {
+  left: -160px;
+}
+
+.container_24 .pull_5 {
+  left: -200px;
+}
+
+.container_24 .pull_6 {
+  left: -240px;
+}
+
+.container_24 .pull_7 {
+  left: -280px;
+}
+
+.container_24 .pull_8 {
+  left: -320px;
+}
+
+.container_24 .pull_9 {
+  left: -360px;
+}
+
+.container_24 .pull_10 {
+  left: -400px;
+}
+
+.container_24 .pull_11 {
+  left: -440px;
+}
+
+.container_24 .pull_12 {
+  left: -480px;
+}
+
+.container_24 .pull_13 {
+  left: -520px;
+}
+
+.container_24 .pull_14 {
+  left: -560px;
+}
+
+.container_24 .pull_15 {
+  left: -600px;
+}
+
+.container_24 .pull_16 {
+  left: -640px;
+}
+
+.container_24 .pull_17 {
+  left: -680px;
+}
+
+.container_24 .pull_18 {
+  left: -720px;
+}
+
+.container_24 .pull_19 {
+  left: -760px;
+}
+
+.container_24 .pull_20 {
+  left: -800px;
+}
+
+.container_24 .pull_21 {
+  left: -840px;
+}
+
+.container_24 .pull_22 {
+  left: -880px;
+}
+
+.container_24 .pull_23 {
+  left: -920px;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_24:before,
+.container_24:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_24:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_24 {
+  zoom: 1;
+}
+
+#header
+{
+  background:  url(http://erikjohansson.org/wp-content/uploads/2012/10/checkered-flag-background.jpg);
+}
+body{
+  background: url(images/background.jpg);
+}
+
+#wrap{
+  background-color: white;
+}
+
+#search{
+  clear: left;
+  float: right;
+  margin-bottom: 10px;
+  margin-top: 60px;
+}
+
+#search input{
+  border: 1px solid black;
+  width: 140px;
+  margin: 0px;
+}
+
+#navigation
+{ 
+  background-color:black;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#navigation ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 13pt;
+  text-align: center;
+
+}
+
+#navigation ul li{
+  list-style-type: none;
+  margin-left: 35px;
+}
+
+#navigation ul li a:hover{
+  background-color: rgb(175, 238, 238);
+  border-radius: 5px;
+}
+
+#allcategory
+{
+  margin-top: 3px;
+}
+
+
+#allcategory li 
+{
+  margin-left: -50px;
+}
+
+#allcategory li 
+{
+  margin-left: -50px;
+  list-style-type: none;
+}
+
+#allcategory li a
+{
+  text-decoration: none;
+}
+
+#SlideShow
+{
+  
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+#right
+{
+  margin-top: 15px;
+  float: right;
+}
+
+#valid
+{
+  
+  border-radius: 5px;
+  margin-bottom: 10px;
+
+}
+
+#valid ul li
+{
+  list-style: none;
+}
+
+#valid ul li a
+{
+  text-align: left;
+}
+
+#cart img{
+  margin : 10px;
+  width:45px;
+  height:auto;
+}
+#cart img{
+  margin : 0px 5px 10px 45px;
+  width:45px;
+  height:45px;
+}
+
+#cart
+{
+  
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+#socialmedia
+{
+  
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-style: none;
+}
+
+#footer
+{
+  background-color:black;
+  margin-top: 15px;
+}
+
+#footer-detail a
+{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+dt{
+  background-color:black;
+ 
+}
+
+dt a{
+  color: #FFF;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+dd a{
+  color: #000;
+  font-size: 12px;
+}
+
+.placeholder {
+    color: #444;
+}
+
+#login input[type="text"],#login input[type="password"] {
+  width: 100%;
+  height: 20px;
+  font-size: 15px;
+  color: #444;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .49);
+  border-radius: 6px;
+  box-shadow: inset 0px 2px 0px #d9d9d9;
+}
+
+#login input[type="text"]:focus,#login input[type="password"]:focus {
+  box-shadow: inset 0px 2px 0px #a7a7a7;
+}
+
+#login input:first-child {
+  margin-top: 0px;
+}
+
+#login input[type="submit"] {
+  width: 40%;
+  height: 25px;
+  margin: 7px 8px 0px 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0px -1px 0px #5b6ddc;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .49);
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 6px;
+
+  background-color: #5466da;
+  background-image: -webkit-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+  background-image: -moz-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+  background-image: -o-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+  background-image: -ms-linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+  background-image: linear-gradient(bottom, #5466da 0%, #768ee4 100%);
+  
+  -webkit-box-shadow: inset 0px 1px 0px #9ab1ec;
+  box-shadow: inset 0px 1px 0px #9ab1ec;
+
+}
+
+#login input[type="submit"]:hover {
+  background-color: #5f73e9;
+  background-image: -webkit-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+  background-image: -moz-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+  background-image: -o-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+  background-image: -ms-linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+  background-image: linear-gradient(bottom, #5f73e9 0%, #859bef 100%);
+
+  -webkit-box-shadow: inset 0px 1px 0px #aab9f4;
+  box-shadow: inset 0px 1px 0px #aab9f4;
+  
+}
+
+#login input[type="submit"]:active {
+  background-color: #7588e1;
+  background-image: -webkit-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+  background-image: -moz-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+  background-image: -o-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+  background-image: -ms-linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+  background-image: linear-gradient(bottom, #7588e1 0%, #7184df 100%);
+
+  -webkit-box-shadow: inset 0px 1px 0px #93a9e9;
+  box-shadow: inset 0px 1px 0px #93a9e9;
+}
+
+#comments{
+  width :100%;
+  height: 50px;
+  height: fix;
+}
+
+
+#sport img{
+  margin: 15px 23px 10px 10px;
+  width: 110px;
+  height: 100px;
+}
+ 
+Status API Training Shop Blog About © 2013 GitHub, Inc. Terms Privacy Security Contact
