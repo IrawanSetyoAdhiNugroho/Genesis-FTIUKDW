@@ -2,12 +2,12 @@
 <html>
 
 	<head>
-		<title>About Us</title>
+		<title>Tentang Kami</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
+		<script type="text/javascript" src="jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
@@ -15,16 +15,16 @@
   				<a href="#"><img src="images/DESAINPROGWEB.png" width="200"/></a>
   			<div id="search" class="grid_5">
 			   	<img src="images/search.png" width="18"> 
-			   	<input type="text" value="search" />
+			   	<input type="text" value="pencarian" />
 			</div>
   			</div>
 
   			<div id="navigation" class="grid_24">
 				<ul>
 					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
-					<li><a href="howtobuy.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
+					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
-					<li><a href="testimony.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
 				</ul>
 			</div>
@@ -82,7 +82,7 @@
 			</div>
 
 			<div id="aboutus" class="grid_14">
-				<center><h1>ABOUT US</h1></center>
+				<center><h3>Tentang Kami</h3></center>
 				<P align="justify">Mainan Remote Control merupakan salah satu kiprah kami dalam dunia bisnis, dengan pengalaman yang cukup lama berkecimpung dalam dunia online dan dunia RC kami siap melayani anda dengan bermodalkan kejujuran, ketekunan sepenuh hati dan ketelitian maksimal guna menggapai kepuasan anda yang merupakan orang-orang kesayangan kami.<br><br>Produk-produk yang kami jual antara lain :</P>
 				<ol>
 					<li>Cars. antara lain Sport, F1, SUV, MPV, Truck, dan sedan remote control. </li>
@@ -102,11 +102,10 @@
 							<label for="username">Email</label><input type="text" name="username">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
-							<br><br>Belum punya akun ?<br><a href="#">Mendaftar</a>
+							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
 						</fieldset>
 					</form>
 					<?php
-						include("koneksi.php");
 						if(isset($_POST['submit']))
 						{
 							$username = $_POST['username'];
@@ -135,7 +134,7 @@
 		
 				</div>
 
-				<div id="images/cart" >
+				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
 					<img src="images/chart.jpg" width="35">
@@ -143,7 +142,7 @@
 				</div>
 
 				<div id="socialmedia">
-					<center><strong>Like atau Follow us:</strong>
+					<center><strong>Like dan Follow kami:</strong>
 						<br><br>
 						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="images/facebook.jpg" width="35"></a><span></span>
 						<a href="https://twitter.com/CosmicRcShop"> <img src="images/twitter.jpg"width="35"></a>
@@ -163,4 +162,5 @@
 	</body>
 
 </html>
+
 

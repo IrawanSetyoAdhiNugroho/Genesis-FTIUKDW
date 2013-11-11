@@ -26,9 +26,9 @@
   			<div id="navigation" class="grid_24">
 				<ul>
 					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
-					<li><a href="howtobuy.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
+					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
-					<li><a href="testimony.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
 					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
 				</ul>
 			</div>
@@ -122,7 +122,7 @@
 							<label for="username">Email</label><input type="text" name="username">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
-							<br><br>Belum punya akun ?<br><a href="#">Mendaftar</a>
+							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
 						</fieldset>
 					</form>
 					<?php
