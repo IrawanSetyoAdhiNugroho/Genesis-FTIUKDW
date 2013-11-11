@@ -5,7 +5,7 @@
 		<title>Testimoni</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
-		<link rel="stylesheet" href="css_24_fixed.css" type="text/css"/>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
 	</head>
 
 	<body>

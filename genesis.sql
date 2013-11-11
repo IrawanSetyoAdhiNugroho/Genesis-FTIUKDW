@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 11 Nov 2013 pada 14.29
+-- Waktu pembuatan: 11 Nov 2013 pada 15.32
 -- Versi Server: 5.6.11
 -- Versi PHP: 5.5.3
 
@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS `datauser` (
 --
 
 INSERT INTO `datauser` (`email`, `username`, `password`, `nomorhp`, `nomorrekening`, `alamat`, `kodepos`, `kabupaten`, `propinsi`) VALUES
-('irawan', '12', '1', '12', 123, '12', '', '12', '123');
+('irawan', '12', '1', '12', 123, '12', '', '12', '123'),
+('irawanecek2@gmail.com', 'irwan', '123', '123', 123, 'purworejo', '54173', 'Purworejo', 'Jawa Tengah');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

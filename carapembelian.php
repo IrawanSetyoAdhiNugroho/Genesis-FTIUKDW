@@ -101,7 +101,7 @@
 					<form method="POST" action="index.php">
 						<fieldset >
 							<legend>Masuk</legend>
-							<label for="username">Email</label><input type="text" name="username">
+							<label for="email">Email</label><input type="text" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
@@ -110,9 +110,9 @@
 					<?php
 						if(isset($_POST['submit']))
 						{
-							$username = $_POST['username'];
+							$email = $_POST['email'];
 							$password = $_POST['password'];
-							$query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+							$query = "SELECT * FROM datauser WHERE email = '$email' AND password = '$password'";
 							$hasilquery = mysql_query($query);
 							$count = mysql_num_rows($hasilquery);
 
@@ -121,21 +121,17 @@
 							}
 
 							if($count == 0)
-								echo "username dan password salah";
+								echo "email dan password salah";
 							else
 							{
 								session_start();
-								$_SESSION['user'] = $username;
-								if($admin == 1)
-								header("location:admin.php");
-								else if($admin == 0)
-								header("location:main.php");
+								$_SESSION['email'] = $email;
+								echo "anda login";
 							}
 						}
 					?>
 		
 				</div>
-
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
