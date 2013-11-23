@@ -689,6 +689,21 @@ body{
   height: 300px;
 }
 
+#valid h3{
+  text-decoration: none;
+  color: black;
+  font-size: 10pt;
+  text-align: center;
+  list-style-type: none;
+  margin-left: 10px;
+
+}
+
+#valid h3:hover{
+  background-color: gray;
+  border-radius: 5px;
+}
+
 #right
 {
   margin-top: 15px;
