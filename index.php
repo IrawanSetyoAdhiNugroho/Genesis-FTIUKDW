@@ -18,22 +18,31 @@
 			$("#aboutus").hide();
 			$("#howtobuy").hide();
 			$("#SlideShow").fadeIn();
+			$("#signup").hide();
 			$("#home").click(function(){
 				$("#aboutus").hide();
 				$("#howtobuy").hide();
 				$("#SlideShow").fadeIn();
+				$("#signup").hide();
 			});	
 			$("#tentang").click(function(){
 				$("#aboutus").show();
 				$("#howtobuy").hide();
 				$("#SlideShow").hide();
+				$("#signup").hide();
 			});	
 			$("#carabeli").click(function(){
 				$("#aboutus").hide();
 				$("#howtobuy").show();
 				$("#SlideShow").hide();
+				$("#signup").hide();
 			});				
-
+			$("#daftar").click(function(){
+				$("#aboutus").hide();
+				$("#howtobuy").hide();
+				$("#SlideShow").hide();
+				$("#signup").show();
+			});			
 		});
 		</script>
 		</head>
@@ -166,7 +175,91 @@
 				</ol>
 				<center><h4>Terima kasih atas kepercayaan anda terhadap RC-Shop.com </h4></center>
 			</div>
-			
+
+			<div id="signup" class="grid_14">
+					<center><h1>Pendaftaran</h1></center>
+					<form id='signupform' action='signup.php' method='post'>
+					 	<table>
+							<tr>
+					            <td>Nama</td>
+					            <td><input type="text" name="name" /></td>
+					        </tr>
+
+							<tr>
+					            <td>Email</td>
+					            <td><input type="text" name="mail" /></td>
+					        </tr>
+
+							<tr>
+					            <td>Nomor Ponsel</td>
+					            <td><input type="text" name="hp" /></td>
+					        </tr>
+
+					        <tr>
+					            <td>Alamat</td>
+					            <td><input type="text" name="alamt" /></td>
+					        </tr>
+
+					        <tr>
+					            <td>Kode POS</td>
+					            <td><input type="text" name="pos"  /></td>
+					        </tr>
+
+					        <tr>
+					            <td>Kabupaten</td>
+					            <td><input type="text" name="kab" /></td>
+					        </tr>
+
+					        <tr>
+					            <td>Propinsi</td>
+					            <td><input type="text" name="prop" /></td>
+					        </tr>
+
+					        <tr>
+					            <td>Nomor Rekening</td>
+					            <td><input type="text" name="rekening" /></td>
+					        </tr>
+
+							<tr>
+					            <td>Kata Sandi</td>
+					            <td><input type="password" name="pass" /></td>
+					        </tr>
+					        
+							<tr>
+					            <td>Ketik Ulang Kata Sandi</td>
+					            <td><input type="password" name="corfmpass" /></td>
+					        </tr>
+					        <tr><td></td></tr><tr></tr><tr></tr><tr></tr>
+							<tr>
+					            <td></td><td></td><td><input type="submit" value="Daftar" /></td>
+					        </tr>
+						</table>
+					</form>
+					<?php
+					if(isset($_POST['mail']) && isset($_POST['name']) && isset($_POST['pass']) && isset($_POST['hp']) && isset($_POST['rekening']) && isset($_POST['alamt']) && isset($_POST['pos']) && isset($_POST['kab']) && isset($_POST['prop']) && isset($_POST['corfmpass'])){
+					//disini lakukan proses insert ke database
+						$mail = ($_POST['mail']);
+						$name = ($_POST['name']);
+						$pass = ($_POST['pass']);
+						$hp = ($_POST['hp']);
+						$rekening = ($_POST['rekening']);
+						$alamt = ($_POST['alamt']);
+						$pos = ($_POST['pos']);
+						$kab = ($_POST['kab']);
+						$prop = ($_POST['prop']);
+						$corfmpass = ($_POST['corfmpass']);
+
+						$query = "INSERT INTO `genesis`.`datauser` (`email`, `username`, `password`, `nomorhp`, `nomorrekening`, `alamat`, `kodepos`, `kabupaten`, `propinsi`) VALUES ('".$mail."', '".$name."', '".$pass."', '".$hp."', '".$rekening."', '".$alamt."', '".$pos."', '".$kab."', '".$prop."')";
+						$res=mysql_query($query) or die ("Ini gagal query");
+						if ($res==1) 
+						{
+							echo "Berhasil sign up";
+						}
+						else echo "Gagal Sign Up";
+					}
+					?>
+				</div>
+
 			<div id="right" class="grid_5">
 				<div id="valid"> 
 					<form method="POST" action="index.php">
@@ -175,7 +268,7 @@
 							<label for="email">Email</label><input type="text" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
-							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
+							<br><br>Belum punya akun ?<br><h3 id="daftar">Mendaftar</h3>
 						</fieldset>
 					</form>
 					<?php
@@ -191,6 +284,7 @@
 								$admin = $data['admin'];
 							}
 
+
 							if($count == 0)
 								echo "email dan password salah";
 							else
@@ -203,6 +297,7 @@
 					?>
 		
 				</div>
+
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
