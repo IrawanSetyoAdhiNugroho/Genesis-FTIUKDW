@@ -11,8 +11,33 @@
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-		<script type="text/javascript" src="jquery.js"></script>	</head>
+		<script type="text/javascript" src="jquery.js"></script>	
+		<script type="text/javascript" >
+		$(document).ready( function(){
 
+			$("#aboutus").hide();
+			$("#howtobuy").hide();
+			$("#SlideShow").fadeIn();
+			$("#home").click(function(){
+				$("#aboutus").hide();
+				$("#howtobuy").hide();
+				$("#SlideShow").fadeIn();
+			});	
+			$("#tentang").click(function(){
+				$("#aboutus").show();
+				$("#howtobuy").hide();
+				$("#SlideShow").hide();
+			});	
+			$("#carabeli").click(function(){
+				$("#aboutus").hide();
+				$("#howtobuy").show();
+				$("#SlideShow").hide();
+			});				
+
+		});
+		</script>
+		</head>
+		
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
@@ -24,13 +49,11 @@
   			</div>
 
   			<div id="navigation" class="grid_24">
-				<ul>
-					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
-					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
-					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
-					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
-				</ul>
+				<h1 id="home" class="grid_4">Beranda</h1>
+				<h1 id="carabeli" class="grid_4">Cara Pembelian</h1>
+				<h1 id="tentang" class="grid_4">Tentang kami</h1>
+				<h1 id="testimoni" class="grid_4">Testimoni</h1>
+				<h1 id="personal" class="grid_4">Personal</h1>
 			</div>
 
 			<div id="allcategory" class="grid_4">
@@ -105,7 +128,6 @@
 				<a href="#" class="ws_frame"></a>
 				<div class="ws_shadow"></div>
 			</div>
-			
 
 			<div id="sport" class="grid_15">
                 <img id="border" src = "images/ngisor/1.jpg" class="grid_4"/>
@@ -114,6 +136,37 @@
                 <img id="border" src = "images/ngisor/4.jpg" class="grid_4"/>
             </div>
             </div>	
+
+            <div id="aboutus" class="grid_14">
+				<center><h1>ABOUT US</h1></center>
+				<P align="justify">Mainan Remote Control merupakan salah satu kiprah kami dalam dunia bisnis, dengan pengalaman yang cukup lama berkecimpung dalam dunia online dan dunia RC kami siap melayani anda dengan bermodalkan kejujuran, ketekunan sepenuh hati dan ketelitian maksimal guna menggapai kepuasan anda yang merupakan orang-orang kesayangan kami.<br><br>Produk-produk yang kami jual antara lain :</P>
+				<ol>
+					<li>Cars. antara lain Sport, F1, SUV, MPV, Truck, dan sedan remote control. </li>
+					<li>Bike. yaitu segala macam motorcycle remote control</li>
+					<li>Air Force. antara lain jenis Helikopter dan jet remote control</li>
+					<li>Water Adventure. antara lain Ship dan Boat remote control</li>
+					<li>Tank. antara lain Leopard dan Tiger-fighter remote control</li>
+				</ol>
+				<p align="justify">Terima kasih atas kepercayaan anda terhadap RC-Shop.com dan kami akan membawa kepercayaan tersebut sebagai mandat utama misi kami yaitu,  "memberikan yang terbaik untuk anda” </p>
+				<h4 align="right">Admin</h4>
+			</div>
+
+			<div id="howtobuy" class="grid_14">
+				<center><h1>HOW TO BUY AT RC SHOP</h1></center>
+				<ol align="justify">
+					<li>Jika anda belum memiliki akun maka Anda dapat mendaftar terlebih dahulu di web kami dengan mengisikan data- data yang diminta dengan benar.  Tapi jika anda sudah memiliki akun, anda bisa sign in terlebi dahulu. </li>
+					<li>Setelah pembuatan akun selesai atau setelah anda sign in, anda dapat melihat- lihat barang- barang yang dijual di web kami. </li>
+					<li>Pilih barang yang ingin anda beli dengan menekan tombol buy </li>
+					<li>Setelah menekan tombol buy, anda akan diminta mengisikan beberapa pertanyaan mengenai paket kiriman yang anda pilih, cara pembayaran dan alamat barang dikirim.  Setelah selesai klik done.</li>
+					<li>Anda dapat segera mentransfer sejumlah yang harus dibayarkan ke rekening kami kurang dari 24 jam. </li>
+					<li>Setelah melakukan pembayaran anda dapat membuka profile anda dan mengklik gambar jam pasir di bagian Purchase Product.</li>
+					<li>Anda akan diminta memasukkan nomer transaksi. Setelah memasukkan nomor transaksi maka kami akan mengubah status pesanan anda. </li>
+					<li>Anda dapat menunggu hingga barang dikirim ke alamat anda.</li>
+					<li>Setelah barang diterima silahkan berikan testimony di web kami. </li>
+				</ol>
+				<center><h4>Terima kasih atas kepercayaan anda terhadap RC-Shop.com </h4></center>
+			</div>
+			
 			<div id="right" class="grid_5">
 				<div id="valid"> 
 					<form method="POST" action="index.php">
