@@ -3,7 +3,8 @@
 	$user="root";
 	$pass="";
 	$database="genesis";
-	$koneksi=mysqli_connect($host,$user,$pass, $database) or die ("Gagal konek ke database");
+	mysql_connect($host,$user,$pass) or die (mysql_error());
 
+	mysql_select_db($database) or die ("Gagal pilih database");
 	ini_set( "display_errors", 0);
 ?>

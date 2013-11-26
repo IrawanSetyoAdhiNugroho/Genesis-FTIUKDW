@@ -95,19 +95,36 @@
 				<h4 align="right">Admin</h4>
 			</div>
 			<div id="right" class="grid_5">
-				<div id="valid"> 
+				<?php
+				session_start();
+				if(isset($_SESSION['email']))
+				{
+				?>
+					<div id="keluar">
+					<?php
+						echo "Selamat datang ";
+						echo $_SESSION['email'];
+					?>
+					<a href="logout.php"><Button>Keluar</Button></a>
+					</div>
+				<?php
+				}
+				else
+				{
+				?>
+					<div id="valid"> 
 					<form method="POST" action="login.php">
 						<fieldset >
 							<legend>Masuk</legend>
-							<label for="email">Email</label><input type="text" name="email">
+							<label for="email">Email</label><input type="email" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
-						</fieldset>
-					</form>
-					
+					</form>	
 				</div>
-				</div>
+				<?php
+				}
+				?>
 
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>

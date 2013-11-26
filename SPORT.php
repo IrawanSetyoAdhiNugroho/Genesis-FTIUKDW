@@ -86,29 +86,26 @@
 			</div>
 
 			<div id="mobilsport" class="grid_14">
-				<?php
-					//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-					$query = "SELECT * from `databarang` WHERE `kategori` = 'Sport'";
-					$hasilquery = mysql_query($query) or die(mysql_error());
-					while($data=mysql_fetch_assoc($hasilquery)) {
-
-				?>
-				<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
-					<div class="subcontent">
-						<p>
-						<?php echo $data['namamainan']; 
-								echo $data['harga'];
-								echo $data['kategori'];
-								echo $data['deskripsi'];
-						?>
-						</p>
-						<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Nasi Goreng"/>
-					</div> </a>
-				<?php
-
-					}
-				?>
-				
+				<div id="kotak-kotak">
+					<?php
+						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
+						$query = "SELECT * from `databarang` WHERE `kategori` = 'Sport'";
+						$hasilquery = mysql_query($query) or die(mysql_error());
+						while($data=mysql_fetch_assoc($hasilquery)) {
+					?>
+					<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
+						<div class="subcontent">
+							<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Nasi Goreng"/>
+							<ul>
+								<li><?php echo $data['namamainan']?></li> 
+								<li><?php echo $data['harga']?></li>
+								<li><?php echo $data['deskripsi']?></li>
+							</ul>
+						</div> </a>
+					<?php
+						}
+					?>
+				</div>
 			</div>
 			
 
