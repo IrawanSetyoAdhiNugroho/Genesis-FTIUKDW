@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>HOME</title>
+		<title>Cara Pembelian</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -81,69 +81,33 @@
 
 			</div>
 
-			<div id="SlideShow" class="grid_14">
-				<div id="wowslider-container1">
-						<div class="ws_images"><ul>
-					<li><img src="images/slider/1.jpg" alt="DESAINPROGWEB" title="DESAINPROGWEB" id="wows1_0"/></li>
-					<li><img src="images/slider/2.jpg" alt="1" title="1" id="wows1_1"/></li>
-					<li><img src="images/slider/3.jpg" alt="2" title="2" id="wows1_2"/></li>
-					</ul>
-				</div>
-				<div class="ws_bullets">
-					<div>
-					<a href="#" title="DESAINPROGWEB"><img src="data1/tooltips/desainprogweb.jpg" alt="DESAINPROGWEB"/>1</a>
-					<a href="#" title="1"><img src="images/tooltips/1.jpg" alt="1"/>2</a>
-					<a href="#" title="2"><img src="images/tooltips/2.jpg" alt="2"/>3</a>
-					<a href="#" title="3"><img src="images/tooltips/3.jpg" alt="3"/>4</a>
-					</div>
-				</div>
-				<span class="wsl"><a href="http://wowslider.com">HTML Slider Control</a> by WOWSlider.com v4.7</span>
-				<a href="#" class="ws_frame"></a>
-				<div class="ws_shadow"></div>
+			<div id="howtobuy" class="grid_14">
+				<center><h3>Cara Pembelian</h3></center>
+				<ol>
+					<li>Jika anda belum memiliki akun maka Anda dapat mendaftar terlebih dahulu di web kami dengan mengisikan data- data yang diminta dengan benar.  Tapi jika anda sudah memiliki akun, anda bisa sign in terlebi dahulu. </li>
+					<li>Setelah pembuatan akun selesai atau setelah anda sign in, anda dapat melihat- lihat barang- barang yang dijual di web kami. </li>
+					<li>Pilih barang yang ingin anda beli dengan menekan tombol buy </li>
+					<li>Setelah menekan tombol buy, anda akan diminta mengisikan beberapa pertanyaan mengenai paket kiriman yang anda pilih, cara pembayaran dan alamat barang dikirim.  Setelah selesai klik done.</li>
+					<li>Anda dapat segera mentransfer sejumlah yang harus dibayarkan ke rekening kami kurang dari 24 jam. </li>
+					<li>Setelah melakukan pembayaran anda dapat membuka profile anda dan mengklik gambar jam pasir di bagian Purchase Product.</li>
+					<li>Anda akan diminta memasukkan nomer transaksi. Setelah memasukkan nomor transaksi maka kami akan mengubah status pesanan anda. </li>
+					<li>Anda dapat menunggu hingga barang dikirim ke alamat anda.</li>
+					<li>Setelah barang diterima silahkan berikan testimony di web kami. </li>
+				</ol>
+				<center><h4>Terima kasih atas kepercayaan anda terhadap RC-Shop.com </h4></center>
 			</div>
-			
-
-			<div id="sport" class="grid_15">
-                <img id="border" src = "images/ngisor/1.jpg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/2.jpg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/3.jpeg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/4.jpg" class="grid_4"/>
-            </div>
-            </div>	
 			<div id="right" class="grid_5">
-				
-					
-				<?php
-				session_start();
-				if(isset($_SESSION['email']))
-				{
-				?>
-					<div id="keluar">
-					<?php
-						echo "Selamat datang ";
-						echo $_SESSION['email'];
-					?>
-					<a href="logout.php"><Button>Keluar</Button></a>
-					</div>
-				<?php
-				}
-				else
-				{
-				?>
-					<div id="valid"> 
+				<div id="valid"> 
 					<form method="POST" action="login.php">
 						<fieldset >
 							<legend>Masuk</legend>
-							<label for="email">Email</label><input type="email" name="email">
+							<label for="email">Email</label><input type="text" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
+						</fieldset>
 					</form>	
 				</div>
-				<?php
-				}
-				?>
-
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
@@ -167,8 +131,10 @@
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
 				</div>
 			</div>
+
 		</div>
 	</body>
 
 </html>
+
 

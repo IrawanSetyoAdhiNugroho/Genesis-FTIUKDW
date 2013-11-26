@@ -1,31 +1,35 @@
+<?php
+	include("koneksi.php")
+?>
+
 <!DOCTYPE html>
 <html>
 
 	<head>
-		<title>SPORT</title>
+		<title>HOME</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-		<script type="text/javascript" src="engine1//jquery.js"></script>	</head>
+		<script type="text/javascript" src="jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
-  				<a href="#"><img src="DESAINPROGWEB.jpg" width="200"/></a>
-  				<div id="search" class="grid_5">
-			    	<button></button> 
-			    	<input type="text" value="search" />
-				</div>
+  				<a href="#"><img src="images/DESAINPROGWEB.png" width="200"/></a>
+  			<div id="search" class="grid_5">
+			   	<img src="images/search.png" width="18"> 
+			   	<input type="text" value="pencarian" />
+			</div>
   			</div>
 
   			<div id="navigation" class="grid_24">
 				<ul>
-					<li><a href="index.php" class="grid_4"><strong>HOME</strong></a></li>
-					<li><a href="howtobuy.php" class="grid_4"><strong>HOW TO BUY</strong></a></li>
-					<li><a href="aboutus.php" class="grid_4"><strong>ABOUT US</strong></a></li>
-					<li><a href="testimony.php" class="grid_4"><strong>TESTIMONY</strong></a></li>
-					<li><a href="#" class="grid_4"><strong>PERSONAL</strong></a></li>
+					<li><a href="index.php" class="grid_4"><strong>Beranda</strong></a></li>
+					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
+					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
+					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
 				</ul>
 			</div>
 
@@ -81,48 +85,80 @@
 
 			</div>
 
-			<div id="sport" class="grid_14">
-				<div>
-                <img id="border" src = "data1/images/1.jpg" class="grid_4"/>
-            	</div>
-            	<div>
-                <img id="border" src = "data1/images/1.jpg" class="grid_4"/>
-            	</div>
-            	<div>
-                <img id="border" src = "data1/images/1.jpg" class="grid_4"/>
-            	</div>
-            	<div>
-                <img id="border" src = "data1/images/1.jpg" class="grid_4"/>
-            	</div>
-            </div>
+			<div id="mobilsport" class="grid_14">
+				<?php
+					//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
+					$query = "SELECT * from `databarang` WHERE `kategori` = 'Sport'";
+					$hasilquery = mysql_query($query) or die(mysql_error());
+					while($data=mysql_fetch_assoc($hasilquery)) {
 
+				?>
+				<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
+					<div class="subcontent">
+						<p>
+						<?php echo $data['namamainan']; 
+								echo $data['harga'];
+								echo $data['kategori'];
+								echo $data['deskripsi'];
+						?>
+						</p>
+						<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Nasi Goreng"/>
+					</div> </a>
+				<?php
+
+					}
+				?>
+				
+			</div>
+			
+
+				
 			<div id="right" class="grid_5">
-			    
-				<div id="valid">
-					<form id='login' action='login.php' method='post' accept-charset='UTF-8' >
+				
+					
+				<?php
+				session_start();
+				if(isset($_SESSION['email']))
+				{
+				?>
+					<div id="keluar">
+					<?php
+						echo "Selamat datang ";
+						echo $_SESSION['email'];
+					?>
+					<a href="logout.php"><Button>Keluar</Button></a>
+					</div>
+				<?php
+				}
+				else
+				{
+				?>
+					<div id="valid"> 
+					<form method="POST" action="login.php">
 						<fieldset >
-							<legend>Login</legend>
-							<input type='hidden' name='submitted' id='submitted' value='1'/>
-							<label for="username">username</label><input type="text" name="username" id='username' username="Charles_H"maxlength="50" >
-							<label for="password">password</label><input type="password" name="password" id='password' maxlength="50" password="password">
-							<input type="submit" name='Submit' value="Log In">
-							<br><br>Doesn't have account? <br><a href="#">Sign Up</a>
-						</fieldset>
-					</form>
+							<legend>Masuk</legend>
+							<label for="email">Email</label><input type="email" name="email">
+							<label for="password">Sandi</label><input type="password" name="password">
+							<input type="submit" value="Masuk" name="submit">
+							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
+					</form>	
 				</div>
+				<?php
+				}
+				?>
 
-				<div id="cart">
-					<h3>Shopping Cart</h3>
+				<div id="cart" >
+					<h3>Keranjang Belanja</h3>
 					<br />
-					<img src="chart.jpg">
+					<img src="images/chart.jpg" width="35">
 					<LABEL></LABEL>
 				</div>
 
 				<div id="socialmedia">
-					<center><strong>Like or Follow us:</strong>
+					<center><strong>Like dan Follow kami:</strong>
 						<br><br>
-						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="facebook.jpg" width="35"></a><span></span>
-						<a href="https://twitter.com/CosmicRcShop"> <img src="twitter.jpg"width="35"></a>
+						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="images/facebook.jpg" width="35"></a><span></span>
+						<a href="https://twitter.com/CosmicRcShop"> <img src="images/twitter.jpg"width="35"></a>
 					</center>
 				</div>
 			</div>
@@ -134,7 +170,6 @@
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
 				</div>
 			</div>
-
 		</div>
 	</body>
 

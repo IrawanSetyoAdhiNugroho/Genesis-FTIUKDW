@@ -94,33 +94,6 @@
 								<input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 						</form>
-						<?php
-							include("koneksi.php");
-							if(isset($_POST['submit']))
-							{
-								$email = $_POST['email'];
-								$password = $_POST['password'];
-								$query = "SELECT * FROM datauser WHERE email = '$email' AND password = '$password'";
-								$hasilquery = mysql_query($query);
-								$count = mysql_num_rows($hasilquery);
-				
-								while ($data = mysql_fetch_assoc($hasilquery)) {
-								$admin = $data['admin'];
-								}
-
-								if($count == 0)
-									echo "username dan password salah";
-								else
-								{
-									session_start();
-									$_SESSION['email'] = $email;
-									if($admin == 1)
-										header("location:admin.php");
-									else if($admin == 0)
-										header("location:main.php");
-								}
-							}
-						?>		
 						<br><br>Belum mendaftar ? <br><a href="SignupFixed.php">Daftar</a>
 					</fieldset>
 				</div>

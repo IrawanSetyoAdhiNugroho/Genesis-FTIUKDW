@@ -35,161 +35,133 @@
 			<div id="allcategory" class="grid_4">
 				
 				<dl>
-					<dt> <a href="#"> Mobil </a> </dt>
+					<dt> <a href="#"> Cars </a> </dt>
 						<dd>
 							<ul>
-								<li><a href="Sport.html"> Sport</a></li>
-								<li><a href="#"> F1 </a></li>
-								<li><a href="#"> SUV</a></li>
-								<li><a href="#"> MPV</a></li>
-								<li><a href="#"> Truck</a></li>
-								<li><a href="#"> Sedan</a></li>
+								<li><a href="SPORT.php"> Sport</a></li>
+								<li><a href="F1.php"> F1 </a></li>
+								<li><a href="SUV.php"> SUV</a></li>
+								<li><a href="MPV.php"> MPV</a></li>
+								<li><a href="TRUCK.php"> Truck</a></li>
+								<li><a href="SEDAN.php"> Sedan</a></li>
 							</ul>
 						</dd>
 
-					<dt> <a href="#"> Motor </a></dt>
+					<dt> <a href="#"> Bike </a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Motorcycle</a></li>
+								<li><a href="MTR.php">Motorcycle</a></li>
 								
 							</ul>
 						</dd>
 
-					<dt> <a href="#">Pesawat</a></dt>
+					<dt> <a href="#"> Air Force</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Helicopter</a></li>
-								<li><a href="#">Jet</a></li>
+								<li><a href="HELI.php">Helicopter</a></li>
+								<li><a href="JET.php">Jet</a></li>
 			
 							</ul>
 						</dd>
 
-					<dt> <a href="#">Kapal</a></dt>
+					<dt> <a href="#"> Water Adventure</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Ship</a></li>
-								<li><a href="#">Boat</a></li>
+								<li><a href="SHIP.php">Ship</a></li>
+								<li><a href="BOAT.php">Boat</a></li>
 								
 							</ul>
 						</dd>
 
-					<dt> <a href="#">Tank</a></dt>
+					<dt> <a href="#"> Tank</a></dt>
 						<dd>
 							<ul>
-								<li><a href="#">Leopard</a></li>
-								<li><a href="#">Tiger Fighter</a></li>
+								<li><a href="LEO.php">Leopard</a></li>
+								<li><a href="TIGER.php">Tiger Fighter</a></li>
 							</ul>
 						</dd>
 				</dl>
 
 			</div>
 
-<div id="sport" class="grid_14">
-				<form action="admin.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
-  <p>Judul Gambar :<br>
-    <input name="judul_gambar" type="text" id="judul_gambar" size="30" maxlength="30" />
-  </p>
-  <p>Harga :<br>
-  	<input name="harga" type="int" id="harga_gambar" size="30" maxlength="30" />
-  </p>
-  <p>
-    File Gambar
-    : 
-    <input name="nama_file" type="file" id="nama_file" size="30" />
-</p>
-<select name="category">
-		<option value="sport">Sport</option>
-		<option value="f1">F1</option>
-		<option value="suv">Sport Utilities Vehicle</option>
-		<option value="mpv">Multi Propose Vihicle</option>
-		<option value="truck">Truck</option>
-		<option value="sedan">Sedan</option>
-		<option value="motorcycle">Motorcycle</option>
-		<option value="helicopter">Helicopter</option>
-		<option value="jet">Jet</option>
-		<option value="ship">Ship</option>
-		<option value="boat">Boat</option>
-		<option value="leo">Leopard</option>
-		<option value="tiger">Tiger</option>
-
-	</select>
-
-  <p>
-    <input type="submit" name="btnSimpan" id="btnSimpan" value="Simpan" />
-  </p>
-</form>
-
-<?php
-$namafolder="gambar/"; //tempat menyimpan file
-$con=mysql_connect("localhost","root","") or die("Gagal");
-mysql_select_db("genesis")  or die("Gagal");
-if (!empty($_FILES["nama_file"]["tmp_name"]))
-{
-	$jenis_gambar=$_FILES['nama_file']['type'];
-	$judul_gambar=$_POST['judul_gambar'];
-	$category_gambar = $_POST['category'];
-	$harga_gambar = $_POST['harga'];
-	if($jenis_gambar=="image/jpeg" || $jenis_gambar=="image/jpg" || $jenis_gambar=="image/gif" || $jenis_gambar=="image/x-png")
-	{			
-		$gambar = $namafolder . basename($_FILES['nama_file']['name']);		
-		if (move_uploaded_file($_FILES['nama_file']['tmp_name'], $gambar)) 
-		{
-			$sql="insert into tb_gambar(judul_gambar,nama_file,category,harga) values ('$judul_gambar','$gambar','$category_gambar','$harga_gambar')";
-			$res=mysql_query($sql) or die (mysql_error());
-			echo "Gambar berhasil dikirim ".$gambar;		   
-			echo "<p><img src=\"$gambar\" width=\"200\"/></p>";
-			echo "<p>Judul Gambar : $judul_gambar</p>";
-			echo "<p>Category : $category_gambar</p>";
-			echo "<p>Harga : $harga_gambar</p>";  
-		} else {
-		   echo "<p>Gambar gagal dikirim</p>";
-		}
-   } else {
-		echo "Jenis gambar yang anda kirim salah. Harus .jpg .gif .png";
-   }
-} else {
-	echo "Anda belum memilih gambar";
-}
-?>
-            </div>
+			<div id="halaman_admin" class="grid_14">
+				<?php
+					session_start();
+					if(isset($_SESSION['email']))
+					{
+						echo "hei. .admin ";
+						echo $_SESSION['email'];
+					}
+					else
+					{
+						header('location:index.php');
+					}
+				?>
+				
+				<?php
+						if(isset($_GET['adds']))echo "Databerhasil ditambahkan";
+				?>
+				<form method="post" action="tambahbarang.php" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td><label>Nama Mainan</label></td>
+							<td><input type="text" name="namamainan" /></td>
+						</tr>
+						<tr>
+							<td><label>Harga</label></td>
+							<td><textarea name="harga"></textarea></td>
+						</tr>
+						<tr>
+							<td><label>Kategori</label></td>
+							<td>
+								<select name="kategori">
+									<option value="sport">Sport</option>
+									<option value="f1">F1</option>
+									<option value="suv">SUV</option>
+									<option value="mpv">MPV</option>
+									<option value="truck">Truck</option>
+									<option value="sedan">Sedan</option>
+									<option value="motorcycle">Motorcycle</option>
+									<option value="helicopter">Helicopter</option>
+									<option value="jet">Jet</option>
+									<option value="ship">Ship</option>
+									<option value="boat">Boat</option>
+									<option value="leo">Leopard</option>
+									<option value="tiger">Tiger</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label>Deskripsi</label></td>
+							<td><textarea name="deskripsi"></textarea></td>
+						</tr>
+						<tr>
+							<td>
+						<label>Gambar</label></td>
+							<td>
+						<input type="file" name="file"/>
+						</td>
+						</tr>
+					</table>
+					<input type="submit" value="tambahbarang" />	
+				</form>
+			</div>
+			
 			
 
 			<div id="right" class="grid_5">
 			    
 			<div id="valid"> 
-					<form method="POST" action="index.php">
+					<form method="POST" action="login.php">
 						<fieldset >
 							<legend>Masuk</legend>
-							<label for="email">Email</label><input type="text" name="email">
+							<label for="email">Email</label><input type="email" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
 						</fieldset>
 					</form>
-					<?php
-						if(isset($_POST['submit']))
-						{
-							$email = $_POST['email'];
-							$password = $_POST['password'];
-							$query = "SELECT * FROM datauser WHERE email = '$email' AND password = '$password'";
-							$hasilquery = mysql_query($query);
-							$count = mysql_num_rows($hasilquery);
-
-							while ($data = mysql_fetch_assoc($hasilquery)) {
-								$admin = $data['admin'];
-							}
-
-							if($count == 0)
-								echo "email dan password salah";
-							else
-							{
-								session_start();
-								$_SESSION['email'] = $email;
-								echo "anda login";
-							}
-						}
-					?>
-		
+							
 				</div>
 
 				<div id="cart">

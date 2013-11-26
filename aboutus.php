@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>HOME</title>
+		<title>Tentang Kami</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -81,68 +81,33 @@
 
 			</div>
 
-			<div id="SlideShow" class="grid_14">
-				<div id="wowslider-container1">
-						<div class="ws_images"><ul>
-					<li><img src="images/slider/1.jpg" alt="DESAINPROGWEB" title="DESAINPROGWEB" id="wows1_0"/></li>
-					<li><img src="images/slider/2.jpg" alt="1" title="1" id="wows1_1"/></li>
-					<li><img src="images/slider/3.jpg" alt="2" title="2" id="wows1_2"/></li>
-					</ul>
-				</div>
-				<div class="ws_bullets">
-					<div>
-					<a href="#" title="DESAINPROGWEB"><img src="data1/tooltips/desainprogweb.jpg" alt="DESAINPROGWEB"/>1</a>
-					<a href="#" title="1"><img src="images/tooltips/1.jpg" alt="1"/>2</a>
-					<a href="#" title="2"><img src="images/tooltips/2.jpg" alt="2"/>3</a>
-					<a href="#" title="3"><img src="images/tooltips/3.jpg" alt="3"/>4</a>
-					</div>
-				</div>
-				<span class="wsl"><a href="http://wowslider.com">HTML Slider Control</a> by WOWSlider.com v4.7</span>
-				<a href="#" class="ws_frame"></a>
-				<div class="ws_shadow"></div>
+			<div id="aboutus" class="grid_14">
+				<center><h3>Tentang Kami</h3></center>
+				<P align="justify">Mainan Remote Control merupakan salah satu kiprah kami dalam dunia bisnis, dengan pengalaman yang cukup lama berkecimpung dalam dunia online dan dunia RC kami siap melayani anda dengan bermodalkan kejujuran, ketekunan sepenuh hati dan ketelitian maksimal guna menggapai kepuasan anda yang merupakan orang-orang kesayangan kami.<br><br>Produk-produk yang kami jual antara lain :</P>
+				<ol>
+					<li>Cars. antara lain Sport, F1, SUV, MPV, Truck, dan sedan remote control. </li>
+					<li>Bike. yaitu segala macam motorcycle remote control</li>
+					<li>Air Force. antara lain jenis Helikopter dan jet remote control</li>
+					<li>Water Adventure. antara lain Ship dan Boat remote control</li>
+					<li>Tank. antara lain Leopard dan Tiger-fighter remote control</li>
+				</ol>
+				<p align="justify">Terima kasih atas kepercayaan anda terhadap RC-Shop.com dan kami akan membawa kepercayaan tersebut sebagai mandat utama misi kami yaitu,  "memberikan yang terbaik untuk anda” </p>
+				<h4 align="right">Admin</h4>
 			</div>
-			
-
-			<div id="sport" class="grid_15">
-                <img id="border" src = "images/ngisor/1.jpg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/2.jpg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/3.jpeg" class="grid_4"/>
-                <img id="border" src = "images/ngisor/4.jpg" class="grid_4"/>
-            </div>
-            </div>	
 			<div id="right" class="grid_5">
-				
-					
-				<?php
-				session_start();
-				if(isset($_SESSION['email']))
-				{
-				?>
-					<div id="keluar">
-					<?php
-						echo "Selamat datang ";
-						echo $_SESSION['email'];
-					?>
-					<a href="logout.php"><Button>Keluar</Button></a>
-					</div>
-				<?php
-				}
-				else
-				{
-				?>
-					<div id="valid"> 
+				<div id="valid"> 
 					<form method="POST" action="login.php">
 						<fieldset >
 							<legend>Masuk</legend>
-							<label for="email">Email</label><input type="email" name="email">
+							<label for="email">Email</label><input type="text" name="email">
 							<label for="password">Sandi</label><input type="password" name="password">
 							<input type="submit" value="Masuk" name="submit">
 							<br><br>Belum punya akun ?<br><a href="signup.php">Mendaftar</a>
-					</form>	
+						</fieldset>
+					</form>
+					
 				</div>
-				<?php
-				}
-				?>
+				</div>
 
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
@@ -167,8 +132,10 @@
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
 				</div>
 			</div>
+
 		</div>
 	</body>
 
 </html>
+
 
