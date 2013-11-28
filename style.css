@@ -869,16 +869,22 @@ dd a{
   height: 100px;
 }
 
-#kotak-kotak
+.subcontent
 {
   width: 120px;
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
+  float: left;
 }
 
-#kotak-kotak ul
+.kotak-kotak ul
 {
   list-style: none;
+}
+
+.kotak-kotak ul li
+{
+  color: black;
 }

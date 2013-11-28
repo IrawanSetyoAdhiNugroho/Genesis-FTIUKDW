@@ -1,5 +1,6 @@
 <?php
-	include("koneksi.php")
+	include("koneksi.php");
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +29,23 @@
 					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
 					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<?php
+					if(isset($_SESSION['admin']))
+					{
+					?>
+
+						<li><a href="admin.php" class="grid_4"><strong>Admin</strong></a></li>	
+					<?php
+					}
+					else 
+					{
+					?>
 					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<?php
+					}
+					?>
 				</ul>
 			</div>
-
 			<div id="allcategory" class="grid_4">
 				
 				<dl>
@@ -86,11 +100,11 @@
 
 			<div id="halaman_admin" class="grid_14">
 				<?php
-					session_start();
-					if(isset($_SESSION['email']))
+					if(isset($_SESSION['admin']))
 					{
-						echo "hei. .admin ";
-						echo $_SESSION['email'];
+					?>	
+						<p>Anda adalah admin : <?php echo $_SESSION['email'];?></p>
+					<?php
 					}
 					else
 					{
@@ -153,7 +167,7 @@
 			    
 			<?php
 				session_start();
-				if(isset($_SESSION['email']))
+				if(isset($_SESSION['admin']))
 				{
 				?>
 					<div id="keluar">

@@ -1,5 +1,6 @@
 <?php
-	include("koneksi.php")
+	include("koneksi.php");
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,21 @@
 					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
 					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<?php
+					if(isset($_SESSION['admin']))
+					{
+					?>
+
+						<li><a href="admin.php" class="grid_4"><strong>Admin</strong></a></li>	
+					<?php
+					}
+					else 
+					{
+					?>
 					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<?php
+					}
+					?>
 				</ul>
 			</div>
 
@@ -86,11 +101,12 @@
 			</div>
 
 			<div id="mobilsport" class="grid_14">
-				<div id="kotak-kotak">
+				<div class="kotak-kotak">
 					<?php
 						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-						$query = "SELECT * from `databarang` WHERE `kategori` = 'Sport'";
+						$query = "SELECT namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'Sport'";
 						$hasilquery = mysql_query($query) or die(mysql_error());
+
 						while($data=mysql_fetch_assoc($hasilquery)) {
 					?>
 					<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">

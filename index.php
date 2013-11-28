@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -25,7 +29,21 @@
 					<li><a href="carapembelian.php" class="grid_4"><strong>Cara Pembelian</strong></a></li>
 					<li><a href="aboutus.php" class="grid_4"><strong>Tentang Kami</strong></a></li>
 					<li><a href="testimoni.php" class="grid_4"><strong>Testimoni</strong></a></li>
+					<?php
+					if(isset($_SESSION['admin']))
+					{
+					?>
+
+						<li><a href="admin.php" class="grid_4"><strong>Admin</strong></a></li>	
+					<?php
+					}
+					else 
+					{
+					?>
 					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<?php
+					}
+					?>
 				</ul>
 			</div>
 
@@ -114,7 +132,6 @@
 				
 					
 				<?php
-				session_start();
 				if(isset($_SESSION['email']))
 				{
 				?>
