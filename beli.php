@@ -100,31 +100,51 @@
 
 			</div>
 
-			<div id="mobilsport" class="grid_14">
-				<div class="kotak-kotak">
-					<?php
-						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-						$query = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'Sport'";
-						$hasilquery = mysql_query($query) or die(mysql_error());
+			<div id="tabelpembelian" class="grid_14">
+				<table border="1" cellspacing="0" cellpadding="2">
+					<thead align="center">
+						<tr>
+							<th>Email</th>
+							<th>Nama Barang</th>
+							<th>Harga</th>
+							<th>Jumlah</th>
+							<th>Total</th>
+						</tr>
+					</thead>
 
-						while($data=mysql_fetch_assoc($hasilquery)) 
-						{
-					?>
-						<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
-							<div class="subcontent">
-								<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Mobil"/>
-								<ul>
-									<li><?php echo $data['namamainan']?></li> 
-									<li><?php echo $data['harga']?></li>
-								</ul>
-							</div> 
-						</a>
-					<?php
-						}
-					?>
-				</div>
+					<tbody>
+						<tr>
+						<?php
+							$query3 = "SELECT email from `datauser` WHERE email ='".$_SESSION['email']."'";
+							$hasil1 = mysql_query($query3) or die(mysql_error());
+							$data1=mysql_fetch_assoc($hasil1);
+						?>
+							<td><?php echo $data1['email']?></td>
+
+						<?php
+							$id = $_GET['id'];
+							$query2 = "SELECT * from `databarang` WHERE id = '".$id."'";
+
+							echo $id;
+
+							$hasil = mysql_query($query2) or die(mysql_error());
+							$data=mysql_fetch_assoc($hasil);
+
+							while($data=mysql_fetch_assoc($hasil)) 
+							{
+						?>
+								<td><?php echo $data['id']?></td>
+								<td><?php echo $data['namamainan']?></td>
+								<td><?php echo $data['harga']?></td>
+						<?php
+							}
+						?>						
+						</tr>
+					</tbody>
+
+				</table>
+				
 			</div>
-			
 
 				
 			<div id="right" class="grid_5">

@@ -100,31 +100,32 @@
 
 			</div>
 
-			<div id="mobilsport" class="grid_14">
-				<div class="kotak-kotak">
-					<?php
-						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-						$query = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'Sport'";
-						$hasilquery = mysql_query($query) or die(mysql_error());
+			<div id="pages" class="grid_14">
+				<?php
+					$id = $_GET['id'];
+					$query2 = "SELECT * from `databarang` WHERE id = '".$id."'";
+					$hasil = mysql_query($query2) or die(mysql_error());
+					$data=mysql_fetch_assoc($hasil)	
+				?>				
+				<img src="<?php echo $data['gambar']; ?>"/>
+				<div id="bawahgambar">
+						<ul>
+							<li><?php echo $data['namamainan']; ?></li>
+							<li><?php echo $data['harga']; ?></li>
+							<li><?php echo $data['kategori']; ?></li>
+							<li><?php echo $data['deskripsi']; ?></li>
+						</ul>
 
-						while($data=mysql_fetch_assoc($hasilquery)) 
-						{
-					?>
-						<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
-							<div class="subcontent">
-								<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Mobil"/>
-								<ul>
-									<li><?php echo $data['namamainan']?></li> 
-									<li><?php echo $data['harga']?></li>
-								</ul>
-							</div> 
-						</a>
-					<?php
-						}
-					?>
+						<?php
+						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
+							$query = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `id` = '".$id."' ";
+							$hasilquery = mysql_query($query) or die(mysql_error());
+							$data=mysql_fetch_assoc($hasilquery) 
+						?>
+						
+						<a href="beli.php?id=<?php echo $data['id'] ?>" class="clearlink"><Button>Beli</Button></a>	
 				</div>
 			</div>
-			
 
 				
 			<div id="right" class="grid_5">

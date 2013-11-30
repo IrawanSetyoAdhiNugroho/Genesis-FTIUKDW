@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 26, 2013 at 11:22 PM
+-- Generation Time: Nov 30, 2013 at 08:25 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -29,21 +29,39 @@ USE `genesis`;
 --
 
 CREATE TABLE IF NOT EXISTS `databarang` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `namamainan` varchar(200) NOT NULL,
-  `harga` int(11) NOT NULL,
+  `harga` varchar(200) NOT NULL,
   `kategori` varchar(200) NOT NULL,
   `deskripsi` varchar(200) NOT NULL,
   `gambar` varchar(200) NOT NULL,
-  PRIMARY KEY (`namamainan`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `databarang`
 --
 
-INSERT INTO `databarang` (`namamainan`, `harga`, `kategori`, `deskripsi`, `gambar`) VALUES
-('anyar', 10000, 'sport', 'apik lho', 'mac_os_x_lion_wallpaper.jpg'),
-('Ndess', 20000, 'sport', 'sadasdad', 'mac_os_x_lion_wallpaper.jpg');
+INSERT INTO `databarang` (`id`, `namamainan`, `harga`, `kategori`, `deskripsi`, `gambar`) VALUES
+(1, 'Sapi', '123123', 'sport', '123231', 'ampunnn.jpg'),
+(2, 'sapi', '2', 'sport', '2', 'aaaa 272.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `datapembelian`
+--
+
+CREATE TABLE IF NOT EXISTS `datapembelian` (
+  `idtransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `emailuser` varchar(200) NOT NULL,
+  `idbarang` int(11) NOT NULL,
+  `namabarang` varchar(200) NOT NULL,
+  `hargasatuan` int(11) NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `total` int(11) NOT NULL,
+  PRIMARY KEY (`idtransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -69,6 +87,7 @@ CREATE TABLE IF NOT EXISTS `datauser` (
 --
 
 INSERT INTO `datauser` (`email`, `username`, `password`, `nomorhp`, `nomorrekening`, `alamat`, `kodepos`, `kabupaten`, `propinsi`) VALUES
+('irawan@gmail.com', 'irawan', '123', '123', '123', '123', '123', '123', '123'),
 ('irawanecek2@gmail.com', 'irawan', '1', '2', '2', '2', '2', '2', '2'),
 ('joko', 'joko', '1', '1', '1', '1', '1', '1', '1');
 

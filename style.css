@@ -879,6 +879,10 @@ dd a{
   float: left;
 }
 
+.kotak-kotak
+{
+  margin-top: 10px;
+}
 .kotak-kotak ul
 {
   list-style: none;
@@ -887,4 +891,25 @@ dd a{
 .kotak-kotak ul li
 {
   color: black;
+}
+
+#pages img
+{
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 300px;
+  height: 250px;
+  display: inline;
+  float: left;
+}
+
+#bawahgambar
+{
+  float: left;
+}
+
+#bawahgambar ul li
+{
+  list-style: none;
 }
