@@ -102,8 +102,44 @@
 
 			<div id="testimony" class="grid_14">
                 <p>Komentar dan saran anda sangat kami butuhkan untuk meningkatkan kualitas situs kami </p>
+                <hr>
+                <?php
+                if($_SESSION['email'])
+                {
+                ?>
+                
+                <form action="testimoni.php" method="post">
+                	<?php
+                		echo $_SESSION['email'];
+                	?>       
+                    testimoni : <input type="text" name="testimoni" >
+                    
+                    <input type="submit" value = "submit" name = "submit">
+            	<?php
+            	}
+            	?>
+		            <?php
+		    			$email=$_SESSION['email'];
 
-                <div class ="a">
+		    			$query="SELECT username FROM `datauser` WHERE email = '".$email."' ";
+		    			
+		    			$data = mysql_query($query);
+
+		    			while($hasil=mysql_fetch_assoc($data))
+		    			{
+		    				$username= $hasil['username'];
+		    			}
+
+		    			$testimoni=$_POST['testimoni'];
+
+		   				$query = "INSERT into `testimoni` (id, email, username, testimoni) VALUES (NULL, '".$email."','".$username."', '".$testimoni."')";
+		    			$res=mysql_query($query) or die (mysql_error());
+		    	?>
+		    	</br>
+		    	
+            	</form>
+
+            	<div class ="a">
                     <?php
                         $query = "SELECT * FROM `testimoni` ";
                         $data = mysql_query($query);
@@ -114,31 +150,7 @@
                         }
                      ?>
                 </div>
-                
-                <hr>
-                <form action="testimoni.php" method="post">
-                	<?php
-                		echo $_SESSION['email'];
-                	?>       
-                    testimoni : <input type="text" name="testimoni" >
-                    
-                    <input type="submit" value = "submit" name = "submit">
-            		
-		            <?php
-		    			$email=$_SESSION['email'];
-		    			$query="SELECT username FROM `datauser` WHERE email = '".$email."' ";
-		    			$data = mysql_query($query);
 
-		    			while($hasil=mysql_fetch_assoc($data))
-		    			{
-		    				$username= $hasil['username'];
-		    			}
-		    			$testimoni=$_POST['testimoni'];
-
-		   				$query = "INSERT into testimoni(email, username, testimoni) VALUES ('".$username."','".$username."', '".$testimoni."')";
-		    			mysql_query($query) or die("Data Error");
-					?>
-            	</form>
             </div>
                 
 				
