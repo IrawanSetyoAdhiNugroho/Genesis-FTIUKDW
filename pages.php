@@ -8,11 +8,31 @@
 
 	<head>
 		<title>HOME</title>
-	
-		<script type="text/javascript" src="jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="jquery-1.6.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
 		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-		<script type="text/javascript" src="jquery.js"></script>	</head>
+		
+		<script type ="text/javascript">
+			$(document).ready (function(){
+				$("#tombolbeli").click(function(){
+					alert("sapi!!!");
+					<?php
+						$id = $_GET['id'];
+						$query2 = "SELECT * from `databarang` WHERE id = '".$id."'";
+						$hasilquery2 = mysql_query($query2) or die(mysql_error());
+						while ($data=mysql_fetch_assoc($hasilquery2))
+						{					
+							echo $data['namamainan'];
+							echo $data['harga'];
+							echo $data['kategori'];
+							echo $data['deskripsi'];
+						}
+					?>
+				});
+			});
+		</script>
+
+	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
@@ -104,8 +124,8 @@
 				<?php
 					$id = $_GET['id'];
 					$query2 = "SELECT * from `databarang` WHERE id = '".$id."'";
-					$hasil = mysql_query($query2) or die(mysql_error());
-					$data=mysql_fetch_assoc($hasil)	
+					$hasilquery2 = mysql_query($query2) or die(mysql_error());
+					$data=mysql_fetch_assoc($hasilquery2)	
 				?>				
 				<img src="<?php echo $data['gambar']; ?>"/>
 				<div id="bawahgambar">
@@ -118,12 +138,13 @@
 
 						<?php
 						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-							$query = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `id` = '".$id."' ";
-							$hasilquery = mysql_query($query) or die(mysql_error());
-							$data=mysql_fetch_assoc($hasilquery) 
+							$query2 = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `id` = '".$id."' ";
+							$hasilquery2 = mysql_query($query2) or die(mysql_error());
+							$data=mysql_fetch_assoc($hasilquery2) 
 						?>
 						
-						<a href="beli.php?id=<?php echo $data['id'] ?>" class="clearlink"><Button>Beli</Button></a>	
+							<a id="tombolbeli" href="beli.php?id=<?php echo $data['id'] ?>" class="clearlink"><Button>Beli</Button></a>	
+						
 				</div>
 			</div>
 

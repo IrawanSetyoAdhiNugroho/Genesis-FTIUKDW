@@ -104,10 +104,10 @@
 				<div class="kotak-kotak">
 					<?php
 						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
-						$query = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'Sport'";
-						$hasilquery = mysql_query($query) or die(mysql_error());
+						$query1 = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'Sport'";
+						$hasilquery1 = mysql_query($query1) or die(mysql_error());
 
-						while($data=mysql_fetch_assoc($hasilquery)) 
+						while($data=mysql_fetch_assoc($hasilquery1)) 
 						{
 					?>
 						<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">

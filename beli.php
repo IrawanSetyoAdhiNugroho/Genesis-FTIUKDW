@@ -115,22 +115,26 @@
 					<tbody>
 						<tr>
 						<?php
-							$query3 = "SELECT email from `datauser` WHERE email ='".$_SESSION['email']."'";
-							$hasil1 = mysql_query($query3) or die(mysql_error());
-							$data1=mysql_fetch_assoc($hasil1);
+							$query3="SELECT*FROM `tampungan`";
+							$hasilquery3=mysql_query($query3)or die(mysql_error());
+							
+							$query4 = "SELECT email from `datauser` WHERE email ='".$_SESSION['email']."'";
+							$hasilquery4 = mysql_query($query4) or die(mysql_error());
+
+							$data1=mysql_fetch_assoc($hasilquery4);
 						?>
+
 							<td><?php echo $data1['email']?></td>
 
 						<?php
 							$id = $_GET['id'];
-							$query2 = "SELECT * from `databarang` WHERE id = '".$id."'";
+							$query3 = "SELECT * from `databarang` WHERE id = '".$id."'";
 
 							echo $id;
 
-							$hasil = mysql_query($query2) or die(mysql_error());
-							$data=mysql_fetch_assoc($hasil);
-
-							while($data=mysql_fetch_assoc($hasil)) 
+							$hasil3 = mysql_query($query3) or die(mysql_error());
+						
+							while($data=mysql_fetch_assoc($hasil3)) 
 							{
 						?>
 								<td><?php echo $data['id']?></td>
@@ -183,6 +187,7 @@
 
 				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
+
 					<br />
 					<img src="images/chart.jpg" width="35">
 					<LABEL></LABEL>
