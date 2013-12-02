@@ -682,6 +682,12 @@ body{
   text-decoration: none;
 }
 
+#allcategory li a:hover
+{
+  color: red;
+}
+
+
 #SlideShow
 {
   
@@ -912,4 +918,15 @@ dd a{
 #bawahgambar ul li
 {
   list-style: none;
+}
+
+#inputtestimoni 
+{
+  width: 500px;
+  height: 100px;
+}
+
+#tabelpembelian
+{
+  margin-top: 15px;
 }

@@ -40,7 +40,7 @@
 					else 
 					{
 					?>
-					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<li><a href="edit.php" class="grid_4"><strong>Personal</strong></a></li>
 					<?php
 					}
 					?>

@@ -7,7 +7,7 @@
 <html>
 
 	<head>
-		<title>HOME</title>
+		<title>Beli</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -41,7 +41,7 @@
 					else 
 					{
 					?>
-					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<li><a href="edit.php" class="grid_4"><strong>Personal</strong></a></li>
 					<?php
 					}
 					?>
@@ -130,14 +130,12 @@
 							$id = $_GET['id'];
 							$query3 = "SELECT * from `databarang` WHERE id = '".$id."'";
 
-							echo $id;
 
 							$hasil3 = mysql_query($query3) or die(mysql_error());
 						
 							while($data=mysql_fetch_assoc($hasil3)) 
 							{
 						?>
-								<td><?php echo $data['id']?></td>
 								<td><?php echo $data['namamainan']?></td>
 								<td><?php echo $data['harga']?></td>
 						<?php

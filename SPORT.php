@@ -7,7 +7,7 @@
 <html>
 
 	<head>
-		<title>HOME</title>
+		<title>Sport</title>
 	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
@@ -41,7 +41,7 @@
 					else 
 					{
 					?>
-					<li><a href="#" class="grid_4"><strong>Personal</strong></a></li>
+					<li><a href="edit.php" class="grid_4"><strong>Personal</strong></a></li>
 					<?php
 					}
 					?>

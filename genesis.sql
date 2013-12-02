@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2013 at 07:09 AM
+-- Generation Time: Dec 03, 2013 at 12:22 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -36,16 +36,16 @@ CREATE TABLE IF NOT EXISTS `databarang` (
   `deskripsi` varchar(200) NOT NULL,
   `gambar` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `databarang`
 --
 
 INSERT INTO `databarang` (`id`, `namamainan`, `harga`, `kategori`, `deskripsi`, `gambar`) VALUES
-(1, 'Sapi', '123123', 'sport', '123231', 'ampunnn.jpg'),
-(2, 'sapi', '2', 'sport', '2', 'aaaa 272.jpg'),
-(3, 'as', '123', 'sport', '12313', 'ampunnn.jpg');
+(4, 'RC Ferrari', '2000000', 'sport', 'Mobil ini memiliki kecepatan yang luar biasa dengan daya dan torsi yang kuat.', '81042.jpeg'),
+(5, 'Formula 1', '3000000', 'f1', 'Jet Darat', 'NQD757A-7.jpg'),
+(6, 'SUV', '1000000', 'suv', 'Mobil penjelajah', 'image_remote-control-mainan-mobil-king-driver.jpg');
 
 -- --------------------------------------------------------
 
@@ -113,11 +113,20 @@ CREATE TABLE IF NOT EXISTS `tampungan` (
 --
 
 CREATE TABLE IF NOT EXISTS `testimoni` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(200) NOT NULL,
   `username` varchar(200) NOT NULL,
   `testimoni` varchar(200) NOT NULL,
-  PRIMARY KEY (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
+
+--
+-- Dumping data for table `testimoni`
+--
+
+INSERT INTO `testimoni` (`id`, `email`, `username`, `testimoni`) VALUES
+(48, 'irawanecek2@gmail.com', 'irawan', 'Mencoba Testimoni'),
+(57, '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

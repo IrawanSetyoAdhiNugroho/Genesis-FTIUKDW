@@ -7,20 +7,21 @@
 <html>
 
 	<head>
-		<title>ADMIN</title>
+		<title>Tiger Fighter</title>
+	
 		<script type="text/javascript" src="jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="style.css" type="text/css"/>
-	</head>
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<script type="text/javascript" src="jquery.js"></script>	</head>
 
 	<body>
 		<div id="wrap" class="container_24"> 
 			<div id="header" class="grid_24">
-
   				<a href="#"><img src="images/DESAINPROGWEB.png" width="200"/></a>
-  				<div id="search" class="grid_5">
-			    	<img src="images/search.png" width="18"> 
-			    	<input type="text" value="pencarian" />
-				</div>
+  			<div id="search" class="grid_5">
+			   	<img src="images/search.png" width="18"> 
+			   	<input type="text" value="pencarian" />
+			</div>
   			</div>
 
   			<div id="navigation" class="grid_24">
@@ -46,6 +47,7 @@
 					?>
 				</ul>
 			</div>
+
 			<div id="allcategory" class="grid_4">
 				
 				<dl>
@@ -98,76 +100,39 @@
 
 			</div>
 
-			<div id="halaman_admin" class="grid_14">
-				<?php
-					if(isset($_SESSION['admin']))
-					{
-					?>	
-						<p>Anda adalah admin : <?php echo $_SESSION['email'];?></p>
+			<div id="mobilsport" class="grid_14">
+				<div class="kotak-kotak">
 					<?php
-					}
-					else
-					{
-						header('location:index.php');
-					}
-				?>
-				
-				<?php
-						if(isset($_GET['adds']))echo "Databerhasil ditambahkan";
-				?>
-				<form method="post" action="tambahbarang.php" enctype="multipart/form-data">
-					<table>
-						<tr>
-							<td><label>Nama Mainan</label></td>
-							<td><input type="text" name="namamainan" /></td>
-						</tr>
-						<tr>
-							<td><label>Harga</label></td>
-							<td><textarea name="harga"></textarea></td>
-						</tr>
-						<tr>
-							<td><label>Kategori</label></td>
-							<td>
-								<select name="kategori">
-									<option value="sport">Sport</option>
-									<option value="f1">F1</option>
-									<option value="suv">SUV</option>
-									<option value="mpv">MPV</option>
-									<option value="truck">Truck</option>
-									<option value="sedan">Sedan</option>
-									<option value="motorcycle">Motorcycle</option>
-									<option value="helicopter">Helicopter</option>
-									<option value="jet">Jet</option>
-									<option value="ship">Ship</option>
-									<option value="boat">Boat</option>
-									<option value="leo">Leopard</option>
-									<option value="tiger">Tiger</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td><label>Deskripsi</label></td>
-							<td><textarea name="deskripsi"></textarea></td>
-						</tr>
-						<tr>
-							<td>
-						<label>Gambar</label></td>
-							<td>
-						<input type="file" name="file"/>
-						</td>
-						</tr>
-					</table>
-					<input type="submit" value="tambahbarang" />	
-				</form>
+						//LAKUKAN QUERY KE MENU DAN GUNAKAN DIV DIBAWAH INI
+						$query1 = "SELECT id, namamainan, harga, kategori, deskripsi, gambar from `databarang` WHERE `kategori` = 'tiger'";
+						$hasilquery1 = mysql_query($query1) or die(mysql_error());
+
+						while($data=mysql_fetch_assoc($hasilquery1)) 
+						{
+					?>
+						<a href="pages.php?id=<?php echo $data['id'] ?>" class="clearlink">
+							<div class="subcontent">
+								<img src="<?php echo $data['gambar'] ?>" class="subimage" title="Mobil"/>
+								<ul>
+									<li><?php echo $data['namamainan']?></li> 
+									<li><?php echo $data['harga']?></li>
+								</ul>
+							</div> 
+						</a>
+					<?php
+						}
+					?>
+				</div>
 			</div>
 			
-			
 
+				
 			<div id="right" class="grid_5">
-			    
-			<?php
+				
+					
+				<?php
 				session_start();
-				if(isset($_SESSION['admin']))
+				if(isset($_SESSION['email']))
 				{
 				?>
 					<div id="keluar">
@@ -196,29 +161,31 @@
 				}
 				?>
 
-				<div id="cart">
+				<div id="cart" >
 					<h3>Keranjang Belanja</h3>
 					<br />
-					<img src="images/chart.jpg">
+					<img src="images/chart.jpg" width="35">
 					<LABEL></LABEL>
 				</div>
 
 				<div id="socialmedia">
 					<center><strong>Like dan Follow kami:</strong>
 						<br><br>
-						<a href=""> <img src="images/facebook.jpg" width="35"></a><span></span>
-						<a href=""> <img src="images/twitter.jpg"width="35"></a>
+						<a href="https://www.facebook.com/pages/RC-SHOP/173164616214639?ref=hl"> <img src="images/facebook.jpg" width="35"></a><span></span>
+						<a href="https://twitter.com/CosmicRcShop"> <img src="images/twitter.jpg"width="35"></a>
 					</center>
 				</div>
 			</div>
 
+
+		
 			<div id="footer" class="grid_24">
 				<div id="footer-detail">
 					<center><a href="">&copy; 2013 RC-Shop.com Design by Genesis Progweb</a></center>
 				</div>
 			</div>
-
 		</div>
 	</body>
 
 </html>
+
